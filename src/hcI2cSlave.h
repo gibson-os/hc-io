@@ -27,7 +27,7 @@
 #define hcI2cEepromDataSize hcEepromSize-6
 
 uint16_t hcI2cEepromPosition;
-uint8_t hcI2cReadBuffer[hcI2cBufferSize+2];
+uint8_t hcI2cReadBuffer[hcI2cBufferSize];
 uint8_t hcI2cWriteBuffer[hcI2cBufferSize];
 uint8_t hcI2cDataChangedLength;
 uint16_t hcI2cPwmBeat;
