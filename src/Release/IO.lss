@@ -1,0 +1,2896 @@
+
+IO.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001716  00000000  00000000  000000b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000072  00800060  00001716  000017ca  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000012a  008000d2  008000d2  0000183c  2**0
+                  ALLOC
+  3 .eeprom       00000200  00810000  00810000  0000183c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .comment      00000030  00000000  00000000  00001a3c  2**0
+                  CONTENTS, READONLY
+  5 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001a6c  2**2
+                  CONTENTS, READONLY
+  6 .debug_aranges 00000060  00000000  00000000  00001aa8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   0000068b  00000000  00000000  00001b08  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 0000048a  00000000  00000000  00002193  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   000002cb  00000000  00000000  0000261d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000017a  00000000  00000000  000028e8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	65 c0       	rjmp	.+202    	; 0xcc <__ctors_end>
+       2:	7f c0       	rjmp	.+254    	; 0x102 <__bad_interrupt>
+       4:	7e c0       	rjmp	.+252    	; 0x102 <__bad_interrupt>
+       6:	7d c0       	rjmp	.+250    	; 0x102 <__bad_interrupt>
+       8:	7c c0       	rjmp	.+248    	; 0x102 <__bad_interrupt>
+       a:	7b c0       	rjmp	.+246    	; 0x102 <__bad_interrupt>
+       c:	94 c2       	rjmp	.+1320   	; 0x536 <__vector_6>
+       e:	79 c0       	rjmp	.+242    	; 0x102 <__bad_interrupt>
+      10:	78 c0       	rjmp	.+240    	; 0x102 <__bad_interrupt>
+      12:	77 c0       	rjmp	.+238    	; 0x102 <__bad_interrupt>
+      14:	76 c0       	rjmp	.+236    	; 0x102 <__bad_interrupt>
+      16:	75 c0       	rjmp	.+234    	; 0x102 <__bad_interrupt>
+      18:	74 c0       	rjmp	.+232    	; 0x102 <__bad_interrupt>
+      1a:	73 c0       	rjmp	.+230    	; 0x102 <__bad_interrupt>
+      1c:	72 c0       	rjmp	.+228    	; 0x102 <__bad_interrupt>
+      1e:	71 c0       	rjmp	.+226    	; 0x102 <__bad_interrupt>
+      20:	70 c0       	rjmp	.+224    	; 0x102 <__bad_interrupt>
+      22:	ec c1       	rjmp	.+984    	; 0x3fc <__vector_17>
+      24:	6e c0       	rjmp	.+220    	; 0x102 <__bad_interrupt>
+      26:	df c0       	rjmp	.+446    	; 0x1e6 <hcWriteToI2c+0x30>
+      28:	e7 c0       	rjmp	.+462    	; 0x1f8 <hcWriteToI2c+0x42>
+      2a:	2b c1       	rjmp	.+598    	; 0x282 <hcWriteToI2c+0xcc>
+      2c:	2a c1       	rjmp	.+596    	; 0x282 <hcWriteToI2c+0xcc>
+      2e:	29 c1       	rjmp	.+594    	; 0x282 <hcWriteToI2c+0xcc>
+      30:	28 c1       	rjmp	.+592    	; 0x282 <hcWriteToI2c+0xcc>
+      32:	27 c1       	rjmp	.+590    	; 0x282 <hcWriteToI2c+0xcc>
+      34:	26 c1       	rjmp	.+588    	; 0x282 <hcWriteToI2c+0xcc>
+      36:	25 c1       	rjmp	.+586    	; 0x282 <hcWriteToI2c+0xcc>
+      38:	24 c1       	rjmp	.+584    	; 0x282 <hcWriteToI2c+0xcc>
+      3a:	e5 c0       	rjmp	.+458    	; 0x206 <hcWriteToI2c+0x50>
+      3c:	e6 c0       	rjmp	.+460    	; 0x20a <hcWriteToI2c+0x54>
+      3e:	f1 c0       	rjmp	.+482    	; 0x222 <hcWriteToI2c+0x6c>
+      40:	f5 c0       	rjmp	.+490    	; 0x22c <hcWriteToI2c+0x76>
+      42:	01 c1       	rjmp	.+514    	; 0x246 <hcWriteToI2c+0x90>
+      44:	1e c1       	rjmp	.+572    	; 0x282 <hcWriteToI2c+0xcc>
+      46:	04 c1       	rjmp	.+520    	; 0x250 <hcWriteToI2c+0x9a>
+      48:	07 c1       	rjmp	.+526    	; 0x258 <hcWriteToI2c+0xa2>
+      4a:	1b c1       	rjmp	.+566    	; 0x282 <hcWriteToI2c+0xcc>
+      4c:	1a c1       	rjmp	.+564    	; 0x282 <hcWriteToI2c+0xcc>
+      4e:	0e c1       	rjmp	.+540    	; 0x26c <hcWriteToI2c+0xb6>
+      50:	0d c1       	rjmp	.+538    	; 0x26c <hcWriteToI2c+0xb6>
+      52:	0c c1       	rjmp	.+536    	; 0x26c <hcWriteToI2c+0xb6>
+      54:	0b c1       	rjmp	.+534    	; 0x26c <hcWriteToI2c+0xb6>
+      56:	0a c1       	rjmp	.+532    	; 0x26c <hcWriteToI2c+0xb6>
+      58:	09 c1       	rjmp	.+530    	; 0x26c <hcWriteToI2c+0xb6>
+      5a:	08 c1       	rjmp	.+528    	; 0x26c <hcWriteToI2c+0xb6>
+      5c:	07 c1       	rjmp	.+526    	; 0x26c <hcWriteToI2c+0xb6>
+      5e:	11 c1       	rjmp	.+546    	; 0x282 <hcWriteToI2c+0xcc>
+      60:	05 c1       	rjmp	.+522    	; 0x26c <hcWriteToI2c+0xb6>
+      62:	0f c1       	rjmp	.+542    	; 0x282 <hcWriteToI2c+0xcc>
+      64:	0e c1       	rjmp	.+540    	; 0x282 <hcWriteToI2c+0xcc>
+      66:	0d c1       	rjmp	.+538    	; 0x282 <hcWriteToI2c+0xcc>
+      68:	0c c1       	rjmp	.+536    	; 0x282 <hcWriteToI2c+0xcc>
+      6a:	0b c1       	rjmp	.+534    	; 0x282 <hcWriteToI2c+0xcc>
+      6c:	0a c1       	rjmp	.+532    	; 0x282 <hcWriteToI2c+0xcc>
+      6e:	09 c1       	rjmp	.+530    	; 0x282 <hcWriteToI2c+0xcc>
+      70:	08 c1       	rjmp	.+528    	; 0x282 <hcWriteToI2c+0xcc>
+      72:	07 c1       	rjmp	.+526    	; 0x282 <hcWriteToI2c+0xcc>
+      74:	06 c1       	rjmp	.+524    	; 0x282 <hcWriteToI2c+0xcc>
+      76:	fd c0       	rjmp	.+506    	; 0x272 <hcWriteToI2c+0xbc>
+      78:	04 c1       	rjmp	.+520    	; 0x282 <hcWriteToI2c+0xcc>
+      7a:	03 c1       	rjmp	.+518    	; 0x282 <hcWriteToI2c+0xcc>
+      7c:	02 c1       	rjmp	.+516    	; 0x282 <hcWriteToI2c+0xcc>
+      7e:	01 c1       	rjmp	.+514    	; 0x282 <hcWriteToI2c+0xcc>
+      80:	00 c1       	rjmp	.+512    	; 0x282 <hcWriteToI2c+0xcc>
+      82:	ff c0       	rjmp	.+510    	; 0x282 <hcWriteToI2c+0xcc>
+      84:	fe c0       	rjmp	.+508    	; 0x282 <hcWriteToI2c+0xcc>
+      86:	fd c0       	rjmp	.+506    	; 0x282 <hcWriteToI2c+0xcc>
+      88:	fc c0       	rjmp	.+504    	; 0x282 <hcWriteToI2c+0xcc>
+      8a:	ab c0       	rjmp	.+342    	; 0x1e2 <hcWriteToI2c+0x2c>
+      8c:	a5 c0       	rjmp	.+330    	; 0x1d8 <hcWriteToI2c+0x22>
+      8e:	f9 c0       	rjmp	.+498    	; 0x282 <hcWriteToI2c+0xcc>
+      90:	f8 c0       	rjmp	.+496    	; 0x282 <hcWriteToI2c+0xcc>
+      92:	f7 c0       	rjmp	.+494    	; 0x282 <hcWriteToI2c+0xcc>
+      94:	a4 c0       	rjmp	.+328    	; 0x1de <hcWriteToI2c+0x28>
+      96:	2f c1       	rjmp	.+606    	; 0x2f6 <hcReadFromI2c+0x46>
+      98:	3c c1       	rjmp	.+632    	; 0x312 <hcReadFromI2c+0x62>
+      9a:	44 c1       	rjmp	.+648    	; 0x324 <hcReadFromI2c+0x74>
+      9c:	aa c1       	rjmp	.+852    	; 0x3f2 <hcReadFromI2c+0x142>
+      9e:	a9 c1       	rjmp	.+850    	; 0x3f2 <hcReadFromI2c+0x142>
+      a0:	a8 c1       	rjmp	.+848    	; 0x3f2 <hcReadFromI2c+0x142>
+      a2:	a7 c1       	rjmp	.+846    	; 0x3f2 <hcReadFromI2c+0x142>
+      a4:	a6 c1       	rjmp	.+844    	; 0x3f2 <hcReadFromI2c+0x142>
+      a6:	a5 c1       	rjmp	.+842    	; 0x3f2 <hcReadFromI2c+0x142>
+      a8:	49 c1       	rjmp	.+658    	; 0x33c <hcReadFromI2c+0x8c>
+      aa:	a3 c1       	rjmp	.+838    	; 0x3f2 <hcReadFromI2c+0x142>
+      ac:	a2 c1       	rjmp	.+836    	; 0x3f2 <hcReadFromI2c+0x142>
+      ae:	a1 c1       	rjmp	.+834    	; 0x3f2 <hcReadFromI2c+0x142>
+      b0:	a0 c1       	rjmp	.+832    	; 0x3f2 <hcReadFromI2c+0x142>
+      b2:	59 c1       	rjmp	.+690    	; 0x366 <hcReadFromI2c+0xb6>
+      b4:	64 c1       	rjmp	.+712    	; 0x37e <hcReadFromI2c+0xce>
+      b6:	9d c1       	rjmp	.+826    	; 0x3f2 <hcReadFromI2c+0x142>
+      b8:	76 c1       	rjmp	.+748    	; 0x3a6 <hcReadFromI2c+0xf6>
+      ba:	41 c9       	rjmp	.-3454   	; 0xfffff33e <__eeprom_end+0xff7ef13e>
+      bc:	71 c7       	rjmp	.+3810   	; 0xfa0 <ioSetData+0x2e>
+      be:	01 c8       	rjmp	.-4094   	; 0xfffff0c2 <__eeprom_end+0xff7eeec2>
+      c0:	35 c8       	rjmp	.-3990   	; 0xfffff12c <__eeprom_end+0xff7eef2c>
+      c2:	8e c8       	rjmp	.-3812   	; 0xfffff1e0 <__eeprom_end+0xff7eefe0>
+      c4:	d2 c8       	rjmp	.-3676   	; 0xfffff26a <__eeprom_end+0xff7ef06a>
+      c6:	da c8       	rjmp	.-3660   	; 0xfffff27c <__eeprom_end+0xff7ef07c>
+      c8:	e7 c8       	rjmp	.-3634   	; 0xfffff298 <__eeprom_end+0xff7ef098>
+      ca:	35 c9       	rjmp	.-3478   	; 0xfffff336 <__eeprom_end+0xff7ef136>
+
+000000cc <__ctors_end>:
+      cc:	11 24       	eor	r1, r1
+      ce:	1f be       	out	0x3f, r1	; 63
+      d0:	cf e5       	ldi	r28, 0x5F	; 95
+      d2:	d4 e0       	ldi	r29, 0x04	; 4
+      d4:	de bf       	out	0x3e, r29	; 62
+      d6:	cd bf       	out	0x3d, r28	; 61
+
+000000d8 <__do_copy_data>:
+      d8:	10 e0       	ldi	r17, 0x00	; 0
+      da:	a0 e6       	ldi	r26, 0x60	; 96
+      dc:	b0 e0       	ldi	r27, 0x00	; 0
+      de:	e6 e1       	ldi	r30, 0x16	; 22
+      e0:	f7 e1       	ldi	r31, 0x17	; 23
+      e2:	02 c0       	rjmp	.+4      	; 0xe8 <__do_copy_data+0x10>
+      e4:	05 90       	lpm	r0, Z+
+      e6:	0d 92       	st	X+, r0
+      e8:	a2 3d       	cpi	r26, 0xD2	; 210
+      ea:	b1 07       	cpc	r27, r17
+      ec:	d9 f7       	brne	.-10     	; 0xe4 <__do_copy_data+0xc>
+
+000000ee <__do_clear_bss>:
+      ee:	21 e0       	ldi	r18, 0x01	; 1
+      f0:	a2 ed       	ldi	r26, 0xD2	; 210
+      f2:	b0 e0       	ldi	r27, 0x00	; 0
+      f4:	01 c0       	rjmp	.+2      	; 0xf8 <.do_clear_bss_start>
+
+000000f6 <.do_clear_bss_loop>:
+      f6:	1d 92       	st	X+, r1
+
+000000f8 <.do_clear_bss_start>:
+      f8:	ac 3f       	cpi	r26, 0xFC	; 252
+      fa:	b2 07       	cpc	r27, r18
+      fc:	e1 f7       	brne	.-8      	; 0xf6 <.do_clear_bss_loop>
+      fe:	b7 da       	rcall	.-2706   	; 0xfffff66e <__eeprom_end+0xff7ef46e>
+     100:	08 cb       	rjmp	.-2544   	; 0xfffff712 <__eeprom_end+0xff7ef512>
+
+00000102 <__bad_interrupt>:
+     102:	7e cf       	rjmp	.-260    	; 0x0 <__vectors>
+
+00000104 <hcInitI2C>:
+     104:	cf 93       	push	r28
+     106:	df 93       	push	r29
+     108:	16 b8       	out	0x06, r1	; 6
+     10a:	80 e0       	ldi	r24, 0x00	; 0
+     10c:	90 e0       	ldi	r25, 0x00	; 0
+     10e:	db da       	rcall	.-2634   	; 0xfffff6c6 <__eeprom_end+0xff7ef4c6>
+     110:	c8 2f       	mov	r28, r24
+     112:	d0 e0       	ldi	r29, 0x00	; 0
+     114:	dc 2f       	mov	r29, r28
+     116:	cc 27       	eor	r28, r28
+     118:	d0 93 dd 00 	sts	0x00DD, r29	; 0x8000dd <hcI2cPwmSpeedValue+0x1>
+     11c:	c0 93 dc 00 	sts	0x00DC, r28	; 0x8000dc <hcI2cPwmSpeedValue>
+     120:	81 e0       	ldi	r24, 0x01	; 1
+     122:	90 e0       	ldi	r25, 0x00	; 0
+     124:	d0 da       	rcall	.-2656   	; 0xfffff6c6 <__eeprom_end+0xff7ef4c6>
+     126:	c8 2b       	or	r28, r24
+     128:	ce 01       	movw	r24, r28
+     12a:	01 97       	sbiw	r24, 0x01	; 1
+     12c:	8e 3f       	cpi	r24, 0xFE	; 254
+     12e:	9f 4f       	sbci	r25, 0xFF	; 255
+     130:	28 f4       	brcc	.+10     	; 0x13c <hcInitI2C+0x38>
+     132:	d0 93 dd 00 	sts	0x00DD, r29	; 0x8000dd <hcI2cPwmSpeedValue+0x1>
+     136:	c0 93 dc 00 	sts	0x00DC, r28	; 0x8000dc <hcI2cPwmSpeedValue>
+     13a:	0f c0       	rjmp	.+30     	; 0x15a <hcInitI2C+0x56>
+     13c:	80 e0       	ldi	r24, 0x00	; 0
+     13e:	90 e4       	ldi	r25, 0x40	; 64
+     140:	90 93 dd 00 	sts	0x00DD, r25	; 0x8000dd <hcI2cPwmSpeedValue+0x1>
+     144:	80 93 dc 00 	sts	0x00DC, r24	; 0x8000dc <hcI2cPwmSpeedValue>
+     148:	60 e4       	ldi	r22, 0x40	; 64
+     14a:	80 e0       	ldi	r24, 0x00	; 0
+     14c:	90 e0       	ldi	r25, 0x00	; 0
+     14e:	d4 da       	rcall	.-2648   	; 0xfffff6f8 <__eeprom_end+0xff7ef4f8>
+     150:	60 91 dc 00 	lds	r22, 0x00DC	; 0x8000dc <hcI2cPwmSpeedValue>
+     154:	81 e0       	ldi	r24, 0x01	; 1
+     156:	90 e0       	ldi	r25, 0x00	; 0
+     158:	cf da       	rcall	.-2658   	; 0xfffff6f8 <__eeprom_end+0xff7ef4f8>
+     15a:	20 91 dc 00 	lds	r18, 0x00DC	; 0x8000dc <hcI2cPwmSpeedValue>
+     15e:	30 91 dd 00 	lds	r19, 0x00DD	; 0x8000dd <hcI2cPwmSpeedValue+0x1>
+     162:	40 e0       	ldi	r20, 0x00	; 0
+     164:	50 e0       	ldi	r21, 0x00	; 0
+     166:	60 e0       	ldi	r22, 0x00	; 0
+     168:	7b e1       	ldi	r23, 0x1B	; 27
+     16a:	87 eb       	ldi	r24, 0xB7	; 183
+     16c:	90 e0       	ldi	r25, 0x00	; 0
+     16e:	89 da       	rcall	.-2798   	; 0xfffff682 <__eeprom_end+0xff7ef482>
+     170:	30 93 d6 00 	sts	0x00D6, r19	; 0x8000d6 <hcI2cPwmBeat+0x1>
+     174:	20 93 d5 00 	sts	0x00D5, r18	; 0x8000d5 <hcI2cPwmBeat>
+     178:	81 e0       	ldi	r24, 0x01	; 1
+     17a:	8e bd       	out	0x2e, r24	; 46
+     17c:	89 b7       	in	r24, 0x39	; 57
+     17e:	80 61       	ori	r24, 0x10	; 16
+     180:	89 bf       	out	0x39, r24	; 57
+     182:	82 e0       	ldi	r24, 0x02	; 2
+     184:	90 e0       	ldi	r25, 0x00	; 0
+     186:	9f da       	rcall	.-2754   	; 0xfffff6c6 <__eeprom_end+0xff7ef4c6>
+     188:	9d ef       	ldi	r25, 0xFD	; 253
+     18a:	98 0f       	add	r25, r24
+     18c:	95 37       	cpi	r25, 0x75	; 117
+     18e:	08 f0       	brcs	.+2      	; 0x192 <hcInitI2C+0x8e>
+     190:	81 e6       	ldi	r24, 0x61	; 97
+     192:	88 0f       	add	r24, r24
+     194:	82 b9       	out	0x02, r24	; 2
+     196:	86 b7       	in	r24, 0x36	; 54
+     198:	8f 7d       	andi	r24, 0xDF	; 223
+     19a:	86 bf       	out	0x36, r24	; 54
+     19c:	86 b7       	in	r24, 0x36	; 54
+     19e:	85 64       	ori	r24, 0x45	; 69
+     1a0:	86 bf       	out	0x36, r24	; 54
+     1a2:	78 94       	sei
+     1a4:	10 92 21 01 	sts	0x0121, r1	; 0x800121 <hcI2cDataChangedLength>
+     1a8:	10 92 d9 00 	sts	0x00D9, r1	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     1ac:	10 92 d8 00 	sts	0x00D8, r1	; 0x8000d8 <hcI2cEepromPosition>
+     1b0:	df 91       	pop	r29
+     1b2:	cf 91       	pop	r28
+     1b4:	08 95       	ret
+
+000001b6 <hcWriteToI2c>:
+     1b6:	e0 91 de 00 	lds	r30, 0x00DE	; 0x8000de <hcI2cReadBuffer>
+     1ba:	e8 3c       	cpi	r30, 0xC8	; 200
+     1bc:	08 f4       	brcc	.+2      	; 0x1c0 <hcWriteToI2c+0xa>
+     1be:	5f c0       	rjmp	.+190    	; 0x27e <hcWriteToI2c+0xc8>
+     1c0:	8e 2f       	mov	r24, r30
+     1c2:	90 e0       	ldi	r25, 0x00	; 0
+     1c4:	fc 01       	movw	r30, r24
+     1c6:	e8 5c       	subi	r30, 0xC8	; 200
+     1c8:	f1 09       	sbc	r31, r1
+     1ca:	e8 33       	cpi	r30, 0x38	; 56
+     1cc:	f1 05       	cpc	r31, r1
+     1ce:	08 f0       	brcs	.+2      	; 0x1d2 <hcWriteToI2c+0x1c>
+     1d0:	58 c0       	rjmp	.+176    	; 0x282 <hcWriteToI2c+0xcc>
+     1d2:	ed 5e       	subi	r30, 0xED	; 237
+     1d4:	ff 4f       	sbci	r31, 0xFF	; 255
+     1d6:	09 94       	ijmp
+     1d8:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <hcI2cDataChangedLength>
+     1dc:	10 c0       	rjmp	.+32     	; 0x1fe <hcWriteToI2c+0x48>
+     1de:	4f da       	rcall	.-2914   	; 0xfffff67e <__eeprom_end+0xff7ef47e>
+     1e0:	08 95       	ret
+     1e2:	4a da       	rcall	.-2924   	; 0xfffff678 <__eeprom_end+0xff7ef478>
+     1e4:	08 95       	ret
+     1e6:	84 e0       	ldi	r24, 0x04	; 4
+     1e8:	90 e0       	ldi	r25, 0x00	; 0
+     1ea:	6d da       	rcall	.-2854   	; 0xfffff6c6 <__eeprom_end+0xff7ef4c6>
+     1ec:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hcI2cWriteBuffer>
+     1f0:	85 e0       	ldi	r24, 0x05	; 5
+     1f2:	90 e0       	ldi	r25, 0x00	; 0
+     1f4:	68 da       	rcall	.-2864   	; 0xfffff6c6 <__eeprom_end+0xff7ef4c6>
+     1f6:	36 c0       	rjmp	.+108    	; 0x264 <hcWriteToI2c+0xae>
+     1f8:	83 e0       	ldi	r24, 0x03	; 3
+     1fa:	90 e0       	ldi	r25, 0x00	; 0
+     1fc:	64 da       	rcall	.-2872   	; 0xfffff6c6 <__eeprom_end+0xff7ef4c6>
+     1fe:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hcI2cWriteBuffer>
+     202:	81 e0       	ldi	r24, 0x01	; 1
+     204:	08 95       	ret
+     206:	37 da       	rcall	.-2962   	; 0xfffff676 <__eeprom_end+0xff7ef476>
+     208:	08 95       	ret
+     20a:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <hcI2cWriteBuffer>
+     20e:	87 eb       	ldi	r24, 0xB7	; 183
+     210:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <hcI2cWriteBuffer+0x1>
+     214:	8b e1       	ldi	r24, 0x1B	; 27
+     216:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <hcI2cWriteBuffer+0x2>
+     21a:	10 92 04 01 	sts	0x0104, r1	; 0x800104 <hcI2cWriteBuffer+0x3>
+     21e:	84 e0       	ldi	r24, 0x04	; 4
+     220:	08 95       	ret
+     222:	81 e0       	ldi	r24, 0x01	; 1
+     224:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hcI2cWriteBuffer>
+     228:	8a ef       	ldi	r24, 0xFA	; 250
+     22a:	1c c0       	rjmp	.+56     	; 0x264 <hcWriteToI2c+0xae>
+     22c:	20 91 d8 00 	lds	r18, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+     230:	30 91 d9 00 	lds	r19, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     234:	8a ef       	ldi	r24, 0xFA	; 250
+     236:	91 e0       	ldi	r25, 0x01	; 1
+     238:	82 1b       	sub	r24, r18
+     23a:	93 0b       	sbc	r25, r19
+     23c:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <hcI2cWriteBuffer>
+     240:	8a ef       	ldi	r24, 0xFA	; 250
+     242:	82 1b       	sub	r24, r18
+     244:	0f c0       	rjmp	.+30     	; 0x264 <hcWriteToI2c+0xae>
+     246:	80 91 d8 00 	lds	r24, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+     24a:	90 91 d9 00 	lds	r25, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     24e:	08 c0       	rjmp	.+16     	; 0x260 <hcWriteToI2c+0xaa>
+     250:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <hcI2cWriteBuffer>
+     254:	80 e2       	ldi	r24, 0x20	; 32
+     256:	06 c0       	rjmp	.+12     	; 0x264 <hcWriteToI2c+0xae>
+     258:	80 91 dc 00 	lds	r24, 0x00DC	; 0x8000dc <hcI2cPwmSpeedValue>
+     25c:	90 91 dd 00 	lds	r25, 0x00DD	; 0x8000dd <hcI2cPwmSpeedValue+0x1>
+     260:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <hcI2cWriteBuffer>
+     264:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <hcI2cWriteBuffer+0x1>
+     268:	82 e0       	ldi	r24, 0x02	; 2
+     26a:	08 95       	ret
+     26c:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <hcI2cWriteBuffer>
+     270:	c8 cf       	rjmp	.-112    	; 0x202 <hcWriteToI2c+0x4c>
+     272:	81 e0       	ldi	r24, 0x01	; 1
+     274:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hcI2cWriteBuffer>
+     278:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <hcI2cWriteBuffer+0x1>
+     27c:	02 c0       	rjmp	.+4      	; 0x282 <hcWriteToI2c+0xcc>
+     27e:	fd d9       	rcall	.-3078   	; 0xfffff67a <__eeprom_end+0xff7ef47a>
+     280:	08 95       	ret
+     282:	80 e0       	ldi	r24, 0x00	; 0
+     284:	08 95       	ret
+
+00000286 <hcI2cCheckDeviceId>:
+     286:	cf 93       	push	r28
+     288:	c0 91 e0 00 	lds	r28, 0x00E0	; 0x8000e0 <hcI2cReadBuffer+0x2>
+     28c:	84 e0       	ldi	r24, 0x04	; 4
+     28e:	90 e0       	ldi	r25, 0x00	; 0
+     290:	1a da       	rcall	.-3020   	; 0xfffff6c6 <__eeprom_end+0xff7ef4c6>
+     292:	c8 13       	cpse	r28, r24
+     294:	0a c0       	rjmp	.+20     	; 0x2aa <hcI2cCheckDeviceId+0x24>
+     296:	c0 91 e1 00 	lds	r28, 0x00E1	; 0x8000e1 <hcI2cReadBuffer+0x3>
+     29a:	85 e0       	ldi	r24, 0x05	; 5
+     29c:	90 e0       	ldi	r25, 0x00	; 0
+     29e:	13 da       	rcall	.-3034   	; 0xfffff6c6 <__eeprom_end+0xff7ef4c6>
+     2a0:	91 e0       	ldi	r25, 0x01	; 1
+     2a2:	c8 13       	cpse	r28, r24
+     2a4:	90 e0       	ldi	r25, 0x00	; 0
+     2a6:	89 2f       	mov	r24, r25
+     2a8:	01 c0       	rjmp	.+2      	; 0x2ac <hcI2cCheckDeviceId+0x26>
+     2aa:	80 e0       	ldi	r24, 0x00	; 0
+     2ac:	cf 91       	pop	r28
+     2ae:	08 95       	ret
+
+000002b0 <hcReadFromI2c>:
+     2b0:	0f 93       	push	r16
+     2b2:	1f 93       	push	r17
+     2b4:	cf 93       	push	r28
+     2b6:	df 93       	push	r29
+     2b8:	80 91 da 00 	lds	r24, 0x00DA	; 0x8000da <hcI2cReadBufferPosition>
+     2bc:	88 23       	and	r24, r24
+     2be:	09 f4       	brne	.+2      	; 0x2c2 <hcReadFromI2c+0x12>
+     2c0:	98 c0       	rjmp	.+304    	; 0x3f2 <hcReadFromI2c+0x142>
+     2c2:	20 91 df 00 	lds	r18, 0x00DF	; 0x8000df <hcI2cReadBuffer+0x1>
+     2c6:	30 e0       	ldi	r19, 0x00	; 0
+     2c8:	90 e0       	ldi	r25, 0x00	; 0
+     2ca:	02 97       	sbiw	r24, 0x02	; 2
+     2cc:	28 17       	cp	r18, r24
+     2ce:	39 07       	cpc	r19, r25
+     2d0:	09 f0       	breq	.+2      	; 0x2d4 <hcReadFromI2c+0x24>
+     2d2:	8f c0       	rjmp	.+286    	; 0x3f2 <hcReadFromI2c+0x142>
+     2d4:	e0 91 de 00 	lds	r30, 0x00DE	; 0x8000de <hcI2cReadBuffer>
+     2d8:	e8 3c       	cpi	r30, 0xC8	; 200
+     2da:	08 f4       	brcc	.+2      	; 0x2de <hcReadFromI2c+0x2e>
+     2dc:	85 c0       	rjmp	.+266    	; 0x3e8 <hcReadFromI2c+0x138>
+     2de:	8e 2f       	mov	r24, r30
+     2e0:	90 e0       	ldi	r25, 0x00	; 0
+     2e2:	fc 01       	movw	r30, r24
+     2e4:	e8 5c       	subi	r30, 0xC8	; 200
+     2e6:	f1 09       	sbc	r31, r1
+     2e8:	e2 31       	cpi	r30, 0x12	; 18
+     2ea:	f1 05       	cpc	r31, r1
+     2ec:	08 f0       	brcs	.+2      	; 0x2f0 <hcReadFromI2c+0x40>
+     2ee:	81 c0       	rjmp	.+258    	; 0x3f2 <hcReadFromI2c+0x142>
+     2f0:	e5 5b       	subi	r30, 0xB5	; 181
+     2f2:	ff 4f       	sbci	r31, 0xFF	; 255
+     2f4:	09 94       	ijmp
+     2f6:	c7 df       	rcall	.-114    	; 0x286 <hcI2cCheckDeviceId>
+     2f8:	88 23       	and	r24, r24
+     2fa:	09 f4       	brne	.+2      	; 0x2fe <hcReadFromI2c+0x4e>
+     2fc:	7a c0       	rjmp	.+244    	; 0x3f2 <hcReadFromI2c+0x142>
+     2fe:	60 91 e2 00 	lds	r22, 0x00E2	; 0x8000e2 <hcI2cReadBuffer+0x4>
+     302:	84 e0       	ldi	r24, 0x04	; 4
+     304:	90 e0       	ldi	r25, 0x00	; 0
+     306:	f8 d9       	rcall	.-3088   	; 0xfffff6f8 <__eeprom_end+0xff7ef4f8>
+     308:	60 91 e3 00 	lds	r22, 0x00E3	; 0x8000e3 <hcI2cReadBuffer+0x5>
+     30c:	85 e0       	ldi	r24, 0x05	; 5
+     30e:	90 e0       	ldi	r25, 0x00	; 0
+     310:	04 c0       	rjmp	.+8      	; 0x31a <hcReadFromI2c+0x6a>
+     312:	60 91 e0 00 	lds	r22, 0x00E0	; 0x8000e0 <hcI2cReadBuffer+0x2>
+     316:	83 e0       	ldi	r24, 0x03	; 3
+     318:	90 e0       	ldi	r25, 0x00	; 0
+     31a:	df 91       	pop	r29
+     31c:	cf 91       	pop	r28
+     31e:	1f 91       	pop	r17
+     320:	0f 91       	pop	r16
+     322:	ea c9       	rjmp	.-3116   	; 0xfffff6f8 <__eeprom_end+0xff7ef4f8>
+     324:	b0 df       	rcall	.-160    	; 0x286 <hcI2cCheckDeviceId>
+     326:	88 23       	and	r24, r24
+     328:	09 f4       	brne	.+2      	; 0x32c <hcReadFromI2c+0x7c>
+     32a:	63 c0       	rjmp	.+198    	; 0x3f2 <hcReadFromI2c+0x142>
+     32c:	60 91 e2 00 	lds	r22, 0x00E2	; 0x8000e2 <hcI2cReadBuffer+0x4>
+     330:	86 2f       	mov	r24, r22
+     332:	88 0f       	add	r24, r24
+     334:	82 b9       	out	0x02, r24	; 2
+     336:	82 e0       	ldi	r24, 0x02	; 2
+     338:	90 e0       	ldi	r25, 0x00	; 0
+     33a:	ef cf       	rjmp	.-34     	; 0x31a <hcReadFromI2c+0x6a>
+     33c:	a4 df       	rcall	.-184    	; 0x286 <hcI2cCheckDeviceId>
+     33e:	88 23       	and	r24, r24
+     340:	09 f4       	brne	.+2      	; 0x344 <hcReadFromI2c+0x94>
+     342:	57 c0       	rjmp	.+174    	; 0x3f2 <hcReadFromI2c+0x142>
+     344:	0f b6       	in	r0, 0x3f	; 63
+     346:	f8 94       	cli
+     348:	a8 95       	wdr
+     34a:	81 b5       	in	r24, 0x21	; 33
+     34c:	88 61       	ori	r24, 0x18	; 24
+     34e:	81 bd       	out	0x21, r24	; 33
+     350:	11 bc       	out	0x21, r1	; 33
+     352:	0f be       	out	0x3f, r0	; 63
+     354:	98 e0       	ldi	r25, 0x08	; 8
+     356:	88 e1       	ldi	r24, 0x18	; 24
+     358:	0f b6       	in	r0, 0x3f	; 63
+     35a:	f8 94       	cli
+     35c:	a8 95       	wdr
+     35e:	81 bd       	out	0x21, r24	; 33
+     360:	0f be       	out	0x3f, r0	; 63
+     362:	91 bd       	out	0x21, r25	; 33
+     364:	ff cf       	rjmp	.-2      	; 0x364 <hcReadFromI2c+0xb4>
+     366:	80 91 e0 00 	lds	r24, 0x00E0	; 0x8000e0 <hcI2cReadBuffer+0x2>
+     36a:	90 91 e1 00 	lds	r25, 0x00E1	; 0x8000e1 <hcI2cReadBuffer+0x3>
+     36e:	98 27       	eor	r25, r24
+     370:	89 27       	eor	r24, r25
+     372:	98 27       	eor	r25, r24
+     374:	90 93 d9 00 	sts	0x00D9, r25	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     378:	80 93 d8 00 	sts	0x00D8, r24	; 0x8000d8 <hcI2cEepromPosition>
+     37c:	3a c0       	rjmp	.+116    	; 0x3f2 <hcReadFromI2c+0x142>
+     37e:	83 df       	rcall	.-250    	; 0x286 <hcI2cCheckDeviceId>
+     380:	88 23       	and	r24, r24
+     382:	b9 f1       	breq	.+110    	; 0x3f2 <hcReadFromI2c+0x142>
+     384:	c6 e0       	ldi	r28, 0x06	; 6
+     386:	d0 e0       	ldi	r29, 0x00	; 0
+     388:	00 e0       	ldi	r16, 0x00	; 0
+     38a:	12 e0       	ldi	r17, 0x02	; 2
+     38c:	6f ef       	ldi	r22, 0xFF	; 255
+     38e:	ce 01       	movw	r24, r28
+     390:	a2 d9       	rcall	.-3260   	; 0xfffff6d6 <__eeprom_end+0xff7ef4d6>
+     392:	a8 95       	wdr
+     394:	21 96       	adiw	r28, 0x01	; 1
+     396:	0c 17       	cp	r16, r28
+     398:	1d 07       	cpc	r17, r29
+     39a:	c1 f7       	brne	.-16     	; 0x38c <hcReadFromI2c+0xdc>
+     39c:	10 92 d9 00 	sts	0x00D9, r1	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     3a0:	10 92 d8 00 	sts	0x00D8, r1	; 0x8000d8 <hcI2cEepromPosition>
+     3a4:	26 c0       	rjmp	.+76     	; 0x3f2 <hcReadFromI2c+0x142>
+     3a6:	20 91 e0 00 	lds	r18, 0x00E0	; 0x8000e0 <hcI2cReadBuffer+0x2>
+     3aa:	30 91 e1 00 	lds	r19, 0x00E1	; 0x8000e1 <hcI2cReadBuffer+0x3>
+     3ae:	32 27       	eor	r19, r18
+     3b0:	23 27       	eor	r18, r19
+     3b2:	32 27       	eor	r19, r18
+     3b4:	c0 91 e0 00 	lds	r28, 0x00E0	; 0x8000e0 <hcI2cReadBuffer+0x2>
+     3b8:	30 93 dd 00 	sts	0x00DD, r19	; 0x8000dd <hcI2cPwmSpeedValue+0x1>
+     3bc:	20 93 dc 00 	sts	0x00DC, r18	; 0x8000dc <hcI2cPwmSpeedValue>
+     3c0:	40 e0       	ldi	r20, 0x00	; 0
+     3c2:	50 e0       	ldi	r21, 0x00	; 0
+     3c4:	60 e0       	ldi	r22, 0x00	; 0
+     3c6:	7b e1       	ldi	r23, 0x1B	; 27
+     3c8:	87 eb       	ldi	r24, 0xB7	; 183
+     3ca:	90 e0       	ldi	r25, 0x00	; 0
+     3cc:	5a d9       	rcall	.-3404   	; 0xfffff682 <__eeprom_end+0xff7ef482>
+     3ce:	30 93 d6 00 	sts	0x00D6, r19	; 0x8000d6 <hcI2cPwmBeat+0x1>
+     3d2:	20 93 d5 00 	sts	0x00D5, r18	; 0x8000d5 <hcI2cPwmBeat>
+     3d6:	6c 2f       	mov	r22, r28
+     3d8:	80 e0       	ldi	r24, 0x00	; 0
+     3da:	90 e0       	ldi	r25, 0x00	; 0
+     3dc:	8d d9       	rcall	.-3302   	; 0xfffff6f8 <__eeprom_end+0xff7ef4f8>
+     3de:	60 91 e1 00 	lds	r22, 0x00E1	; 0x8000e1 <hcI2cReadBuffer+0x3>
+     3e2:	81 e0       	ldi	r24, 0x01	; 1
+     3e4:	90 e0       	ldi	r25, 0x00	; 0
+     3e6:	99 cf       	rjmp	.-206    	; 0x31a <hcReadFromI2c+0x6a>
+     3e8:	df 91       	pop	r29
+     3ea:	cf 91       	pop	r28
+     3ec:	1f 91       	pop	r17
+     3ee:	0f 91       	pop	r16
+     3f0:	45 c9       	rjmp	.-3446   	; 0xfffff67c <__eeprom_end+0xff7ef47c>
+     3f2:	df 91       	pop	r29
+     3f4:	cf 91       	pop	r28
+     3f6:	1f 91       	pop	r17
+     3f8:	0f 91       	pop	r16
+     3fa:	08 95       	ret
+
+000003fc <__vector_17>:
+     3fc:	1f 92       	push	r1
+     3fe:	0f 92       	push	r0
+     400:	0f b6       	in	r0, 0x3f	; 63
+     402:	0f 92       	push	r0
+     404:	11 24       	eor	r1, r1
+     406:	2f 93       	push	r18
+     408:	3f 93       	push	r19
+     40a:	4f 93       	push	r20
+     40c:	5f 93       	push	r21
+     40e:	6f 93       	push	r22
+     410:	7f 93       	push	r23
+     412:	8f 93       	push	r24
+     414:	9f 93       	push	r25
+     416:	af 93       	push	r26
+     418:	bf 93       	push	r27
+     41a:	ef 93       	push	r30
+     41c:	ff 93       	push	r31
+     41e:	81 b1       	in	r24, 0x01	; 1
+     420:	88 7f       	andi	r24, 0xF8	; 248
+     422:	80 3a       	cpi	r24, 0xA0	; 160
+     424:	e1 f1       	breq	.+120    	; 0x49e <__stack+0x3f>
+     426:	28 f4       	brcc	.+10     	; 0x432 <__LOCK_REGION_LENGTH__+0x32>
+     428:	80 36       	cpi	r24, 0x60	; 96
+     42a:	41 f0       	breq	.+16     	; 0x43c <__LOCK_REGION_LENGTH__+0x3c>
+     42c:	80 38       	cpi	r24, 0x80	; 128
+     42e:	59 f0       	breq	.+22     	; 0x446 <__LOCK_REGION_LENGTH__+0x46>
+     430:	3a c0       	rjmp	.+116    	; 0x4a6 <__stack+0x47>
+     432:	88 3a       	cpi	r24, 0xA8	; 168
+     434:	b1 f0       	breq	.+44     	; 0x462 <__stack+0x3>
+     436:	88 3b       	cpi	r24, 0xB8	; 184
+     438:	c9 f0       	breq	.+50     	; 0x46c <__stack+0xd>
+     43a:	35 c0       	rjmp	.+106    	; 0x4a6 <__stack+0x47>
+     43c:	85 ec       	ldi	r24, 0xC5	; 197
+     43e:	86 bf       	out	0x36, r24	; 54
+     440:	10 92 da 00 	sts	0x00DA, r1	; 0x8000da <hcI2cReadBufferPosition>
+     444:	32 c0       	rjmp	.+100    	; 0x4aa <__stack+0x4b>
+     446:	e0 91 da 00 	lds	r30, 0x00DA	; 0x8000da <hcI2cReadBufferPosition>
+     44a:	81 e0       	ldi	r24, 0x01	; 1
+     44c:	8e 0f       	add	r24, r30
+     44e:	80 93 da 00 	sts	0x00DA, r24	; 0x8000da <hcI2cReadBufferPosition>
+     452:	93 b1       	in	r25, 0x03	; 3
+     454:	f0 e0       	ldi	r31, 0x00	; 0
+     456:	e2 52       	subi	r30, 0x22	; 34
+     458:	ff 4f       	sbci	r31, 0xFF	; 255
+     45a:	90 83       	st	Z, r25
+     45c:	80 32       	cpi	r24, 0x20	; 32
+     45e:	e8 f4       	brcc	.+58     	; 0x49a <__stack+0x3b>
+     460:	22 c0       	rjmp	.+68     	; 0x4a6 <__stack+0x47>
+     462:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <hcI2cWriteBufferPosition>
+     466:	a7 de       	rcall	.-690    	; 0x1b6 <hcWriteToI2c>
+     468:	80 93 d4 00 	sts	0x00D4, r24	; 0x8000d4 <hcI2cSendDataLength>
+     46c:	80 91 d4 00 	lds	r24, 0x00D4	; 0x8000d4 <hcI2cSendDataLength>
+     470:	81 11       	cpse	r24, r1
+     472:	02 c0       	rjmp	.+4      	; 0x478 <__stack+0x19>
+     474:	13 b8       	out	0x03, r1	; 3
+     476:	11 c0       	rjmp	.+34     	; 0x49a <__stack+0x3b>
+     478:	e0 91 00 01 	lds	r30, 0x0100	; 0x800100 <hcI2cWriteBufferPosition>
+     47c:	81 e0       	ldi	r24, 0x01	; 1
+     47e:	8e 0f       	add	r24, r30
+     480:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <hcI2cWriteBufferPosition>
+     484:	f0 e0       	ldi	r31, 0x00	; 0
+     486:	ef 5f       	subi	r30, 0xFF	; 255
+     488:	fe 4f       	sbci	r31, 0xFE	; 254
+     48a:	80 81       	ld	r24, Z
+     48c:	83 b9       	out	0x03, r24	; 3
+     48e:	90 91 00 01 	lds	r25, 0x0100	; 0x800100 <hcI2cWriteBufferPosition>
+     492:	80 91 d4 00 	lds	r24, 0x00D4	; 0x8000d4 <hcI2cSendDataLength>
+     496:	98 17       	cp	r25, r24
+     498:	30 f0       	brcs	.+12     	; 0x4a6 <__stack+0x47>
+     49a:	85 e8       	ldi	r24, 0x85	; 133
+     49c:	05 c0       	rjmp	.+10     	; 0x4a8 <__stack+0x49>
+     49e:	85 ec       	ldi	r24, 0xC5	; 197
+     4a0:	86 bf       	out	0x36, r24	; 54
+     4a2:	06 df       	rcall	.-500    	; 0x2b0 <hcReadFromI2c>
+     4a4:	02 c0       	rjmp	.+4      	; 0x4aa <__stack+0x4b>
+     4a6:	85 ec       	ldi	r24, 0xC5	; 197
+     4a8:	86 bf       	out	0x36, r24	; 54
+     4aa:	ff 91       	pop	r31
+     4ac:	ef 91       	pop	r30
+     4ae:	bf 91       	pop	r27
+     4b0:	af 91       	pop	r26
+     4b2:	9f 91       	pop	r25
+     4b4:	8f 91       	pop	r24
+     4b6:	7f 91       	pop	r23
+     4b8:	6f 91       	pop	r22
+     4ba:	5f 91       	pop	r21
+     4bc:	4f 91       	pop	r20
+     4be:	3f 91       	pop	r19
+     4c0:	2f 91       	pop	r18
+     4c2:	0f 90       	pop	r0
+     4c4:	0f be       	out	0x3f, r0	; 63
+     4c6:	0f 90       	pop	r0
+     4c8:	1f 90       	pop	r1
+     4ca:	18 95       	reti
+
+000004cc <hcI2cReadByteFromEeprom>:
+     4cc:	8a 5f       	subi	r24, 0xFA	; 250
+     4ce:	9f 4f       	sbci	r25, 0xFF	; 255
+     4d0:	fa c8       	rjmp	.-3596   	; 0xfffff6c6 <__eeprom_end+0xff7ef4c6>
+
+000004d2 <hcI2cWriteByteToEeprom>:
+     4d2:	8a 5f       	subi	r24, 0xFA	; 250
+     4d4:	9f 4f       	sbci	r25, 0xFF	; 255
+     4d6:	10 c9       	rjmp	.-3552   	; 0xfffff6f8 <__eeprom_end+0xff7ef4f8>
+
+000004d8 <hcI2cUpdateByteInEeprom>:
+     4d8:	8a 5f       	subi	r24, 0xFA	; 250
+     4da:	9f 4f       	sbci	r25, 0xFF	; 255
+     4dc:	fc c8       	rjmp	.-3592   	; 0xfffff6d6 <__eeprom_end+0xff7ef4d6>
+
+000004de <hcI2cInterruptCheck>:
+     4de:	cf 93       	push	r28
+     4e0:	c0 91 d7 00 	lds	r28, 0x00D7	; 0x8000d7 <hcI2cInterruptCount>
+     4e4:	cc 23       	and	r28, r28
+     4e6:	29 f1       	breq	.+74     	; 0x532 <hcI2cInterruptCheck+0x54>
+     4e8:	cb d8       	rcall	.-3690   	; 0xfffff680 <__eeprom_end+0xff7ef480>
+     4ea:	80 91 2a 01 	lds	r24, 0x012A	; 0x80012a <hcIsrCount+0x2>
+     4ee:	90 91 2b 01 	lds	r25, 0x012B	; 0x80012b <hcIsrCount+0x3>
+     4f2:	8c 0f       	add	r24, r28
+     4f4:	91 1d       	adc	r25, r1
+     4f6:	90 93 2b 01 	sts	0x012B, r25	; 0x80012b <hcIsrCount+0x3>
+     4fa:	80 93 2a 01 	sts	0x012A, r24	; 0x80012a <hcIsrCount+0x2>
+     4fe:	80 91 d7 00 	lds	r24, 0x00D7	; 0x8000d7 <hcI2cInterruptCount>
+     502:	8c 1b       	sub	r24, r28
+     504:	80 93 d7 00 	sts	0x00D7, r24	; 0x8000d7 <hcI2cInterruptCount>
+     508:	80 91 28 01 	lds	r24, 0x0128	; 0x800128 <hcIsrCount>
+     50c:	90 91 29 01 	lds	r25, 0x0129	; 0x800129 <hcIsrCount+0x1>
+     510:	20 91 dc 00 	lds	r18, 0x00DC	; 0x8000dc <hcI2cPwmSpeedValue>
+     514:	30 91 dd 00 	lds	r19, 0x00DD	; 0x8000dd <hcI2cPwmSpeedValue+0x1>
+     518:	28 17       	cp	r18, r24
+     51a:	39 07       	cpc	r19, r25
+     51c:	30 f0       	brcs	.+12     	; 0x52a <hcI2cInterruptCheck+0x4c>
+     51e:	01 96       	adiw	r24, 0x01	; 1
+     520:	90 93 29 01 	sts	0x0129, r25	; 0x800129 <hcIsrCount+0x1>
+     524:	80 93 28 01 	sts	0x0128, r24	; 0x800128 <hcIsrCount>
+     528:	04 c0       	rjmp	.+8      	; 0x532 <hcI2cInterruptCheck+0x54>
+     52a:	10 92 29 01 	sts	0x0129, r1	; 0x800129 <hcIsrCount+0x1>
+     52e:	10 92 28 01 	sts	0x0128, r1	; 0x800128 <hcIsrCount>
+     532:	cf 91       	pop	r28
+     534:	08 95       	ret
+
+00000536 <__vector_6>:
+     536:	1f 92       	push	r1
+     538:	0f 92       	push	r0
+     53a:	0f b6       	in	r0, 0x3f	; 63
+     53c:	0f 92       	push	r0
+     53e:	11 24       	eor	r1, r1
+     540:	2f 93       	push	r18
+     542:	3f 93       	push	r19
+     544:	8f 93       	push	r24
+     546:	9f 93       	push	r25
+     548:	f8 94       	cli
+     54a:	2a b5       	in	r18, 0x2a	; 42
+     54c:	3b b5       	in	r19, 0x2b	; 43
+     54e:	80 91 d5 00 	lds	r24, 0x00D5	; 0x8000d5 <hcI2cPwmBeat>
+     552:	90 91 d6 00 	lds	r25, 0x00D6	; 0x8000d6 <hcI2cPwmBeat+0x1>
+     556:	82 0f       	add	r24, r18
+     558:	93 1f       	adc	r25, r19
+     55a:	9b bd       	out	0x2b, r25	; 43
+     55c:	8a bd       	out	0x2a, r24	; 42
+     55e:	80 91 d7 00 	lds	r24, 0x00D7	; 0x8000d7 <hcI2cInterruptCount>
+     562:	8f 5f       	subi	r24, 0xFF	; 255
+     564:	80 93 d7 00 	sts	0x00D7, r24	; 0x8000d7 <hcI2cInterruptCount>
+     568:	78 94       	sei
+     56a:	9f 91       	pop	r25
+     56c:	8f 91       	pop	r24
+     56e:	3f 91       	pop	r19
+     570:	2f 91       	pop	r18
+     572:	0f 90       	pop	r0
+     574:	0f be       	out	0x3f, r0	; 63
+     576:	0f 90       	pop	r0
+     578:	1f 90       	pop	r1
+     57a:	18 95       	reti
+
+0000057c <ioExecuteDirectConnect>:
+     57c:	7f 92       	push	r7
+     57e:	8f 92       	push	r8
+     580:	9f 92       	push	r9
+     582:	af 92       	push	r10
+     584:	bf 92       	push	r11
+     586:	cf 92       	push	r12
+     588:	df 92       	push	r13
+     58a:	ef 92       	push	r14
+     58c:	ff 92       	push	r15
+     58e:	0f 93       	push	r16
+     590:	1f 93       	push	r17
+     592:	cf 93       	push	r28
+     594:	df 93       	push	r29
+     596:	ec 01       	movw	r28, r24
+     598:	8b 01       	movw	r16, r22
+     59a:	8c e0       	ldi	r24, 0x0C	; 12
+     59c:	b8 2e       	mov	r11, r24
+     59e:	90 e2       	ldi	r25, 0x20	; 32
+     5a0:	a9 2e       	mov	r10, r25
+     5a2:	ee 24       	eor	r14, r14
+     5a4:	ea 94       	dec	r14
+     5a6:	f1 2c       	mov	r15, r1
+     5a8:	20 97       	sbiw	r28, 0x00	; 0
+     5aa:	09 f4       	brne	.+2      	; 0x5ae <ioExecuteDirectConnect+0x32>
+     5ac:	9c c0       	rjmp	.+312    	; 0x6e6 <ioExecuteDirectConnect+0x16a>
+     5ae:	80 91 d1 00 	lds	r24, 0x00D1	; 0x8000d1 <ioDirectConnectStatus>
+     5b2:	88 23       	and	r24, r24
+     5b4:	09 f4       	brne	.+2      	; 0x5b8 <ioExecuteDirectConnect+0x3c>
+     5b6:	97 c0       	rjmp	.+302    	; 0x6e6 <ioExecuteDirectConnect+0x16a>
+     5b8:	92 df       	rcall	.-220    	; 0x4de <hcI2cInterruptCheck>
+     5ba:	ce 01       	movw	r24, r28
+     5bc:	87 df       	rcall	.-242    	; 0x4cc <hcI2cReadByteFromEeprom>
+     5be:	f8 01       	movw	r30, r16
+     5c0:	a0 81       	ld	r26, Z
+     5c2:	ba 9e       	mul	r11, r26
+     5c4:	d0 01       	movw	r26, r0
+     5c6:	11 24       	eor	r1, r1
+     5c8:	a1 5d       	subi	r26, 0xD1	; 209
+     5ca:	be 4f       	sbci	r27, 0xFE	; 254
+     5cc:	9c 91       	ld	r25, X
+     5ce:	95 fb       	bst	r25, 5
+     5d0:	99 27       	eor	r25, r25
+     5d2:	90 f9       	bld	r25, 0
+     5d4:	28 2f       	mov	r18, r24
+     5d6:	22 1f       	adc	r18, r18
+     5d8:	22 27       	eor	r18, r18
+     5da:	22 1f       	adc	r18, r18
+     5dc:	29 13       	cpse	r18, r25
+     5de:	74 c0       	rjmp	.+232    	; 0x6c8 <ioExecuteDirectConnect+0x14c>
+     5e0:	8f 77       	andi	r24, 0x7F	; 127
+     5e2:	b8 9e       	mul	r11, r24
+     5e4:	40 01       	movw	r8, r0
+     5e6:	11 24       	eor	r1, r1
+     5e8:	b4 01       	movw	r22, r8
+     5ea:	64 5d       	subi	r22, 0xD4	; 212
+     5ec:	7e 4f       	sbci	r23, 0xFE	; 254
+     5ee:	6b 01       	movw	r12, r22
+     5f0:	db 01       	movw	r26, r22
+     5f2:	8c 91       	ld	r24, X
+     5f4:	80 ff       	sbrs	r24, 0
+     5f6:	68 c0       	rjmp	.+208    	; 0x6c8 <ioExecuteDirectConnect+0x14c>
+     5f8:	ce 01       	movw	r24, r28
+     5fa:	01 96       	adiw	r24, 0x01	; 1
+     5fc:	67 df       	rcall	.-306    	; 0x4cc <hcI2cReadByteFromEeprom>
+     5fe:	78 2e       	mov	r7, r24
+     600:	ce 01       	movw	r24, r28
+     602:	02 96       	adiw	r24, 0x02	; 2
+     604:	63 df       	rcall	.-314    	; 0x4cc <hcI2cReadByteFromEeprom>
+     606:	72 fa       	bst	r7, 2
+     608:	22 27       	eor	r18, r18
+     60a:	20 f9       	bld	r18, 0
+     60c:	f4 01       	movw	r30, r8
+     60e:	e1 5d       	subi	r30, 0xD1	; 209
+     610:	fe 4f       	sbci	r31, 0xFE	; 254
+     612:	90 81       	ld	r25, Z
+     614:	20 fb       	bst	r18, 0
+     616:	95 f9       	bld	r25, 5
+     618:	90 83       	st	Z, r25
+     61a:	d6 01       	movw	r26, r12
+     61c:	15 96       	adiw	r26, 0x05	; 5
+     61e:	1c 92       	st	X, r1
+     620:	1e 92       	st	-X, r1
+     622:	14 97       	sbiw	r26, 0x04	; 4
+     624:	47 2d       	mov	r20, r7
+     626:	46 95       	lsr	r20
+     628:	47 25       	eor	r20, r7
+     62a:	28 2f       	mov	r18, r24
+     62c:	30 e0       	ldi	r19, 0x00	; 0
+     62e:	97 2d       	mov	r25, r7
+     630:	96 95       	lsr	r25
+     632:	96 95       	lsr	r25
+     634:	96 95       	lsr	r25
+     636:	40 fd       	sbrc	r20, 0
+     638:	20 c0       	rjmp	.+64     	; 0x67a <ioExecuteDirectConnect+0xfe>
+     63a:	12 96       	adiw	r26, 0x02	; 2
+     63c:	3c 93       	st	X, r19
+     63e:	2e 93       	st	-X, r18
+     640:	11 97       	sbiw	r26, 0x01	; 1
+     642:	80 81       	ld	r24, Z
+     644:	80 7e       	andi	r24, 0xE0	; 224
+     646:	98 2b       	or	r25, r24
+     648:	90 83       	st	Z, r25
+     64a:	80 81       	ld	r24, Z
+     64c:	85 ff       	sbrs	r24, 5
+     64e:	3a c0       	rjmp	.+116    	; 0x6c4 <ioExecuteDirectConnect+0x148>
+     650:	11 96       	adiw	r26, 0x01	; 1
+     652:	8d 91       	ld	r24, X+
+     654:	9c 91       	ld	r25, X
+     656:	12 97       	sbiw	r26, 0x02	; 2
+     658:	89 2b       	or	r24, r25
+     65a:	a1 f1       	breq	.+104    	; 0x6c4 <ioExecuteDirectConnect+0x148>
+     65c:	11 96       	adiw	r26, 0x01	; 1
+     65e:	8d 91       	ld	r24, X+
+     660:	9c 91       	ld	r25, X
+     662:	12 97       	sbiw	r26, 0x02	; 2
+     664:	15 96       	adiw	r26, 0x05	; 5
+     666:	9c 93       	st	X, r25
+     668:	8e 93       	st	-X, r24
+     66a:	14 97       	sbiw	r26, 0x04	; 4
+     66c:	12 96       	adiw	r26, 0x02	; 2
+     66e:	fc 92       	st	X, r15
+     670:	ee 92       	st	-X, r14
+     672:	11 97       	sbiw	r26, 0x01	; 1
+     674:	80 81       	ld	r24, Z
+     676:	8f 7d       	andi	r24, 0xDF	; 223
+     678:	15 c0       	rjmp	.+42     	; 0x6a4 <ioExecuteDirectConnect+0x128>
+     67a:	d6 01       	movw	r26, r12
+     67c:	11 96       	adiw	r26, 0x01	; 1
+     67e:	4d 91       	ld	r20, X+
+     680:	5c 91       	ld	r21, X
+     682:	12 97       	sbiw	r26, 0x02	; 2
+     684:	70 fe       	sbrs	r7, 0
+     686:	10 c0       	rjmp	.+32     	; 0x6a8 <ioExecuteDirectConnect+0x12c>
+     688:	ba 01       	movw	r22, r20
+     68a:	62 1b       	sub	r22, r18
+     68c:	73 0b       	sbc	r23, r19
+     68e:	12 96       	adiw	r26, 0x02	; 2
+     690:	7c 93       	st	X, r23
+     692:	6e 93       	st	-X, r22
+     694:	11 97       	sbiw	r26, 0x01	; 1
+     696:	80 81       	ld	r24, Z
+     698:	89 1b       	sub	r24, r25
+     69a:	98 2f       	mov	r25, r24
+     69c:	9f 71       	andi	r25, 0x1F	; 31
+     69e:	80 81       	ld	r24, Z
+     6a0:	80 7e       	andi	r24, 0xE0	; 224
+     6a2:	89 2b       	or	r24, r25
+     6a4:	80 83       	st	Z, r24
+     6a6:	0e c0       	rjmp	.+28     	; 0x6c4 <ioExecuteDirectConnect+0x148>
+     6a8:	24 0f       	add	r18, r20
+     6aa:	35 1f       	adc	r19, r21
+     6ac:	12 96       	adiw	r26, 0x02	; 2
+     6ae:	3c 93       	st	X, r19
+     6b0:	2e 93       	st	-X, r18
+     6b2:	11 97       	sbiw	r26, 0x01	; 1
+     6b4:	80 81       	ld	r24, Z
+     6b6:	98 0f       	add	r25, r24
+     6b8:	89 2f       	mov	r24, r25
+     6ba:	8f 71       	andi	r24, 0x1F	; 31
+     6bc:	90 81       	ld	r25, Z
+     6be:	90 7e       	andi	r25, 0xE0	; 224
+     6c0:	98 2b       	or	r25, r24
+     6c2:	90 83       	st	Z, r25
+     6c4:	a0 92 21 01 	sts	0x0121, r10	; 0x800121 <hcI2cDataChangedLength>
+     6c8:	ce 01       	movw	r24, r28
+     6ca:	03 96       	adiw	r24, 0x03	; 3
+     6cc:	ff de       	rcall	.-514    	; 0x4cc <hcI2cReadByteFromEeprom>
+     6ce:	d8 2e       	mov	r13, r24
+     6d0:	ce 01       	movw	r24, r28
+     6d2:	04 96       	adiw	r24, 0x04	; 4
+     6d4:	fb de       	rcall	.-522    	; 0x4cc <hcI2cReadByteFromEeprom>
+     6d6:	cd 2d       	mov	r28, r13
+     6d8:	d0 e0       	ldi	r29, 0x00	; 0
+     6da:	d8 2b       	or	r29, r24
+     6dc:	c8 3f       	cpi	r28, 0xF8	; 248
+     6de:	b1 e0       	ldi	r27, 0x01	; 1
+     6e0:	db 07       	cpc	r29, r27
+     6e2:	08 f4       	brcc	.+2      	; 0x6e6 <ioExecuteDirectConnect+0x16a>
+     6e4:	61 cf       	rjmp	.-318    	; 0x5a8 <ioExecuteDirectConnect+0x2c>
+     6e6:	df 91       	pop	r29
+     6e8:	cf 91       	pop	r28
+     6ea:	1f 91       	pop	r17
+     6ec:	0f 91       	pop	r16
+     6ee:	ff 90       	pop	r15
+     6f0:	ef 90       	pop	r14
+     6f2:	df 90       	pop	r13
+     6f4:	cf 90       	pop	r12
+     6f6:	bf 90       	pop	r11
+     6f8:	af 90       	pop	r10
+     6fa:	9f 90       	pop	r9
+     6fc:	8f 90       	pop	r8
+     6fe:	7f 90       	pop	r7
+     700:	08 95       	ret
+
+00000702 <ioStartExecuteDirectConnect>:
+     702:	0f 93       	push	r16
+     704:	1f 93       	push	r17
+     706:	cf 93       	push	r28
+     708:	df 93       	push	r29
+     70a:	8c 01       	movw	r16, r24
+     70c:	fc 01       	movw	r30, r24
+     70e:	c0 81       	ld	r28, Z
+     710:	cc 0f       	add	r28, r28
+     712:	cc 0f       	add	r28, r28
+     714:	82 e0       	ldi	r24, 0x02	; 2
+     716:	8c 0f       	add	r24, r28
+     718:	90 e0       	ldi	r25, 0x00	; 0
+     71a:	d8 de       	rcall	.-592    	; 0x4cc <hcI2cReadByteFromEeprom>
+     71c:	d8 2f       	mov	r29, r24
+     71e:	83 e0       	ldi	r24, 0x03	; 3
+     720:	8c 0f       	add	r24, r28
+     722:	90 e0       	ldi	r25, 0x00	; 0
+     724:	d3 de       	rcall	.-602    	; 0x4cc <hcI2cReadByteFromEeprom>
+     726:	8f 3f       	cpi	r24, 0xFF	; 255
+     728:	41 f0       	breq	.+16     	; 0x73a <ioStartExecuteDirectConnect+0x38>
+     72a:	b8 01       	movw	r22, r16
+     72c:	8d 2f       	mov	r24, r29
+     72e:	90 e0       	ldi	r25, 0x00	; 0
+     730:	df 91       	pop	r29
+     732:	cf 91       	pop	r28
+     734:	1f 91       	pop	r17
+     736:	0f 91       	pop	r16
+     738:	21 cf       	rjmp	.-446    	; 0x57c <ioExecuteDirectConnect>
+     73a:	df 91       	pop	r29
+     73c:	cf 91       	pop	r28
+     73e:	1f 91       	pop	r17
+     740:	0f 91       	pop	r16
+     742:	08 95       	ret
+
+00000744 <ioReadInputs>:
+     744:	df 92       	push	r13
+     746:	ef 92       	push	r14
+     748:	ff 92       	push	r15
+     74a:	0f 93       	push	r16
+     74c:	1f 93       	push	r17
+     74e:	cf 93       	push	r28
+     750:	df 93       	push	r29
+     752:	1f 92       	push	r1
+     754:	cd b7       	in	r28, 0x3d	; 61
+     756:	de b7       	in	r29, 0x3e	; 62
+     758:	19 82       	std	Y+1, r1	; 0x01
+     75a:	6c e0       	ldi	r22, 0x0C	; 12
+     75c:	f6 2e       	mov	r15, r22
+     75e:	ee 24       	eor	r14, r14
+     760:	e3 94       	inc	r14
+     762:	70 e2       	ldi	r23, 0x20	; 32
+     764:	d7 2e       	mov	r13, r23
+     766:	89 81       	ldd	r24, Y+1	; 0x01
+     768:	80 31       	cpi	r24, 0x10	; 16
+     76a:	08 f0       	brcs	.+2      	; 0x76e <ioReadInputs+0x2a>
+     76c:	62 c0       	rjmp	.+196    	; 0x832 <ioReadInputs+0xee>
+     76e:	b7 de       	rcall	.-658    	; 0x4de <hcI2cInterruptCheck>
+     770:	89 81       	ldd	r24, Y+1	; 0x01
+     772:	90 e0       	ldi	r25, 0x00	; 0
+     774:	f8 9e       	mul	r15, r24
+     776:	f0 01       	movw	r30, r0
+     778:	f9 9e       	mul	r15, r25
+     77a:	f0 0d       	add	r31, r0
+     77c:	11 24       	eor	r1, r1
+     77e:	df 01       	movw	r26, r30
+     780:	a4 5d       	subi	r26, 0xD4	; 212
+     782:	be 4f       	sbci	r27, 0xFE	; 254
+     784:	2c 91       	ld	r18, X
+     786:	20 fd       	sbrc	r18, 0
+     788:	50 c0       	rjmp	.+160    	; 0x82a <ioReadInputs+0xe6>
+     78a:	e1 5d       	subi	r30, 0xD1	; 209
+     78c:	fe 4f       	sbci	r31, 0xFE	; 254
+     78e:	30 81       	ld	r19, Z
+     790:	dc 01       	movw	r26, r24
+     792:	aa 0f       	add	r26, r26
+     794:	bb 1f       	adc	r27, r27
+     796:	a0 59       	subi	r26, 0x90	; 144
+     798:	bf 4f       	sbci	r27, 0xFF	; 255
+     79a:	0d 90       	ld	r0, X+
+     79c:	bc 91       	ld	r27, X
+     79e:	a0 2d       	mov	r26, r0
+     7a0:	2c 91       	ld	r18, X
+     7a2:	dc 01       	movw	r26, r24
+     7a4:	a0 5a       	subi	r26, 0xA0	; 160
+     7a6:	bf 4f       	sbci	r27, 0xFF	; 255
+     7a8:	4c 91       	ld	r20, X
+     7aa:	35 fb       	bst	r19, 5
+     7ac:	00 27       	eor	r16, r16
+     7ae:	00 f9       	bld	r16, 0
+     7b0:	10 e0       	ldi	r17, 0x00	; 0
+     7b2:	30 e0       	ldi	r19, 0x00	; 0
+     7b4:	02 c0       	rjmp	.+4      	; 0x7ba <ioReadInputs+0x76>
+     7b6:	35 95       	asr	r19
+     7b8:	27 95       	ror	r18
+     7ba:	4a 95       	dec	r20
+     7bc:	e2 f7       	brpl	.-8      	; 0x7b6 <ioReadInputs+0x72>
+     7be:	21 70       	andi	r18, 0x01	; 1
+     7c0:	33 27       	eor	r19, r19
+     7c2:	dc 01       	movw	r26, r24
+     7c4:	a4 51       	subi	r26, 0x14	; 20
+     7c6:	be 4f       	sbci	r27, 0xFE	; 254
+     7c8:	02 17       	cp	r16, r18
+     7ca:	13 07       	cpc	r17, r19
+     7cc:	61 f0       	breq	.+24     	; 0x7e6 <ioReadInputs+0xa2>
+     7ce:	20 81       	ld	r18, Z
+     7d0:	25 fb       	bst	r18, 5
+     7d2:	22 27       	eor	r18, r18
+     7d4:	20 f9       	bld	r18, 0
+     7d6:	20 95       	com	r18
+     7d8:	30 81       	ld	r19, Z
+     7da:	20 fb       	bst	r18, 0
+     7dc:	35 f9       	bld	r19, 5
+     7de:	30 83       	st	Z, r19
+     7e0:	ec 92       	st	X, r14
+     7e2:	d0 92 21 01 	sts	0x0121, r13	; 0x800121 <hcI2cDataChangedLength>
+     7e6:	2c 91       	ld	r18, X
+     7e8:	22 23       	and	r18, r18
+     7ea:	f9 f0       	breq	.+62     	; 0x82a <ioReadInputs+0xe6>
+     7ec:	4c 91       	ld	r20, X
+     7ee:	f8 9e       	mul	r15, r24
+     7f0:	90 01       	movw	r18, r0
+     7f2:	f9 9e       	mul	r15, r25
+     7f4:	30 0d       	add	r19, r0
+     7f6:	11 24       	eor	r1, r1
+     7f8:	f9 01       	movw	r30, r18
+     7fa:	e4 5d       	subi	r30, 0xD4	; 212
+     7fc:	fe 4f       	sbci	r31, 0xFE	; 254
+     7fe:	81 81       	ldd	r24, Z+1	; 0x01
+     800:	92 81       	ldd	r25, Z+2	; 0x02
+     802:	f9 01       	movw	r30, r18
+     804:	e1 5d       	subi	r30, 0xD1	; 209
+     806:	fe 4f       	sbci	r31, 0xFE	; 254
+     808:	50 81       	ld	r21, Z
+     80a:	5f 71       	andi	r21, 0x1F	; 31
+     80c:	24 2f       	mov	r18, r20
+     80e:	30 e0       	ldi	r19, 0x00	; 0
+     810:	45 e0       	ldi	r20, 0x05	; 5
+     812:	88 0f       	add	r24, r24
+     814:	99 1f       	adc	r25, r25
+     816:	4a 95       	dec	r20
+     818:	e1 f7       	brne	.-8      	; 0x812 <ioReadInputs+0xce>
+     81a:	85 2b       	or	r24, r21
+     81c:	28 17       	cp	r18, r24
+     81e:	39 07       	cpc	r19, r25
+     820:	20 f0       	brcs	.+8      	; 0x82a <ioReadInputs+0xe6>
+     822:	1c 92       	st	X, r1
+     824:	ce 01       	movw	r24, r28
+     826:	01 96       	adiw	r24, 0x01	; 1
+     828:	6c df       	rcall	.-296    	; 0x702 <ioStartExecuteDirectConnect>
+     82a:	89 81       	ldd	r24, Y+1	; 0x01
+     82c:	8f 5f       	subi	r24, 0xFF	; 255
+     82e:	89 83       	std	Y+1, r24	; 0x01
+     830:	9a cf       	rjmp	.-204    	; 0x766 <ioReadInputs+0x22>
+     832:	0f 90       	pop	r0
+     834:	df 91       	pop	r29
+     836:	cf 91       	pop	r28
+     838:	1f 91       	pop	r17
+     83a:	0f 91       	pop	r16
+     83c:	ff 90       	pop	r15
+     83e:	ef 90       	pop	r14
+     840:	df 90       	pop	r13
+     842:	08 95       	ret
+
+00000844 <ioDefragDirectConnect>:
+     844:	6f 92       	push	r6
+     846:	7f 92       	push	r7
+     848:	8f 92       	push	r8
+     84a:	9f 92       	push	r9
+     84c:	af 92       	push	r10
+     84e:	bf 92       	push	r11
+     850:	cf 92       	push	r12
+     852:	df 92       	push	r13
+     854:	ef 92       	push	r14
+     856:	ff 92       	push	r15
+     858:	0f 93       	push	r16
+     85a:	1f 93       	push	r17
+     85c:	cf 93       	push	r28
+     85e:	df 93       	push	r29
+     860:	80 91 d8 00 	lds	r24, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+     864:	90 91 d9 00 	lds	r25, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     868:	80 34       	cpi	r24, 0x40	; 64
+     86a:	91 05       	cpc	r25, r1
+     86c:	09 f4       	brne	.+2      	; 0x870 <ioDefragDirectConnect+0x2c>
+     86e:	9a c0       	rjmp	.+308    	; 0x9a4 <ioDefragDirectConnect+0x160>
+     870:	c0 e4       	ldi	r28, 0x40	; 64
+     872:	d0 e0       	ldi	r29, 0x00	; 0
+     874:	80 91 d8 00 	lds	r24, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+     878:	90 91 d9 00 	lds	r25, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     87c:	c8 17       	cp	r28, r24
+     87e:	d9 07       	cpc	r29, r25
+     880:	08 f0       	brcs	.+2      	; 0x884 <ioDefragDirectConnect+0x40>
+     882:	90 c0       	rjmp	.+288    	; 0x9a4 <ioDefragDirectConnect+0x160>
+     884:	5e 01       	movw	r10, r28
+     886:	84 e0       	ldi	r24, 0x04	; 4
+     888:	a8 0e       	add	r10, r24
+     88a:	b1 1c       	adc	r11, r1
+     88c:	c5 01       	movw	r24, r10
+     88e:	1e de       	rcall	.-964    	; 0x4cc <hcI2cReadByteFromEeprom>
+     890:	8f 3f       	cpi	r24, 0xFF	; 255
+     892:	09 f0       	breq	.+2      	; 0x896 <ioDefragDirectConnect+0x52>
+     894:	85 c0       	rjmp	.+266    	; 0x9a0 <ioDefragDirectConnect+0x15c>
+     896:	00 91 d8 00 	lds	r16, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+     89a:	10 91 d9 00 	lds	r17, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     89e:	c0 17       	cp	r28, r16
+     8a0:	d1 07       	cpc	r29, r17
+     8a2:	29 f4       	brne	.+10     	; 0x8ae <ioDefragDirectConnect+0x6a>
+     8a4:	c0 91 d8 00 	lds	r28, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+     8a8:	d0 91 d9 00 	lds	r29, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     8ac:	79 c0       	rjmp	.+242    	; 0x9a0 <ioDefragDirectConnect+0x15c>
+     8ae:	78 01       	movw	r14, r16
+     8b0:	82 e0       	ldi	r24, 0x02	; 2
+     8b2:	e8 0e       	add	r14, r24
+     8b4:	f1 1c       	adc	r15, r1
+     8b6:	c7 01       	movw	r24, r14
+     8b8:	09 de       	rcall	.-1006   	; 0x4cc <hcI2cReadByteFromEeprom>
+     8ba:	8f 3f       	cpi	r24, 0xFF	; 255
+     8bc:	19 f4       	brne	.+6      	; 0x8c4 <ioDefragDirectConnect+0x80>
+     8be:	05 50       	subi	r16, 0x05	; 5
+     8c0:	11 09       	sbc	r17, r1
+     8c2:	ed cf       	rjmp	.-38     	; 0x89e <ioDefragDirectConnect+0x5a>
+     8c4:	c8 01       	movw	r24, r16
+     8c6:	02 de       	rcall	.-1020   	; 0x4cc <hcI2cReadByteFromEeprom>
+     8c8:	68 2f       	mov	r22, r24
+     8ca:	ce 01       	movw	r24, r28
+     8cc:	05 de       	rcall	.-1014   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     8ce:	48 01       	movw	r8, r16
+     8d0:	8f ef       	ldi	r24, 0xFF	; 255
+     8d2:	88 1a       	sub	r8, r24
+     8d4:	98 0a       	sbc	r9, r24
+     8d6:	c4 01       	movw	r24, r8
+     8d8:	f9 dd       	rcall	.-1038   	; 0x4cc <hcI2cReadByteFromEeprom>
+     8da:	68 2f       	mov	r22, r24
+     8dc:	ce 01       	movw	r24, r28
+     8de:	01 96       	adiw	r24, 0x01	; 1
+     8e0:	fb dd       	rcall	.-1034   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     8e2:	c7 01       	movw	r24, r14
+     8e4:	f3 dd       	rcall	.-1050   	; 0x4cc <hcI2cReadByteFromEeprom>
+     8e6:	68 2f       	mov	r22, r24
+     8e8:	ce 01       	movw	r24, r28
+     8ea:	02 96       	adiw	r24, 0x02	; 2
+     8ec:	f5 dd       	rcall	.-1046   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     8ee:	38 01       	movw	r6, r16
+     8f0:	83 e0       	ldi	r24, 0x03	; 3
+     8f2:	68 0e       	add	r6, r24
+     8f4:	71 1c       	adc	r7, r1
+     8f6:	c3 01       	movw	r24, r6
+     8f8:	e9 dd       	rcall	.-1070   	; 0x4cc <hcI2cReadByteFromEeprom>
+     8fa:	68 2f       	mov	r22, r24
+     8fc:	ce 01       	movw	r24, r28
+     8fe:	03 96       	adiw	r24, 0x03	; 3
+     900:	eb dd       	rcall	.-1066   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     902:	68 01       	movw	r12, r16
+     904:	84 e0       	ldi	r24, 0x04	; 4
+     906:	c8 0e       	add	r12, r24
+     908:	d1 1c       	adc	r13, r1
+     90a:	c6 01       	movw	r24, r12
+     90c:	df dd       	rcall	.-1090   	; 0x4cc <hcI2cReadByteFromEeprom>
+     90e:	68 2f       	mov	r22, r24
+     910:	c5 01       	movw	r24, r10
+     912:	e2 dd       	rcall	.-1084   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     914:	6f ef       	ldi	r22, 0xFF	; 255
+     916:	c8 01       	movw	r24, r16
+     918:	df dd       	rcall	.-1090   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     91a:	6f ef       	ldi	r22, 0xFF	; 255
+     91c:	c4 01       	movw	r24, r8
+     91e:	dc dd       	rcall	.-1096   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     920:	6f ef       	ldi	r22, 0xFF	; 255
+     922:	c7 01       	movw	r24, r14
+     924:	d9 dd       	rcall	.-1102   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     926:	6f ef       	ldi	r22, 0xFF	; 255
+     928:	c3 01       	movw	r24, r6
+     92a:	d6 dd       	rcall	.-1108   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     92c:	6f ef       	ldi	r22, 0xFF	; 255
+     92e:	c6 01       	movw	r24, r12
+     930:	d3 dd       	rcall	.-1114   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     932:	10 93 d9 00 	sts	0x00D9, r17	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     936:	00 93 d8 00 	sts	0x00D8, r16	; 0x8000d8 <hcI2cEepromPosition>
+     93a:	c1 2c       	mov	r12, r1
+     93c:	d1 2c       	mov	r13, r1
+     93e:	c6 01       	movw	r24, r12
+     940:	03 96       	adiw	r24, 0x03	; 3
+     942:	c4 dd       	rcall	.-1144   	; 0x4cc <hcI2cReadByteFromEeprom>
+     944:	78 2e       	mov	r7, r24
+     946:	56 01       	movw	r10, r12
+     948:	8f ef       	ldi	r24, 0xFF	; 255
+     94a:	78 16       	cp	r7, r24
+     94c:	11 f1       	breq	.+68     	; 0x992 <ioDefragDirectConnect+0x14e>
+     94e:	45 01       	movw	r8, r10
+     950:	82 e0       	ldi	r24, 0x02	; 2
+     952:	88 0e       	add	r8, r24
+     954:	91 1c       	adc	r9, r1
+     956:	c4 01       	movw	r24, r8
+     958:	b9 dd       	rcall	.-1166   	; 0x4cc <hcI2cReadByteFromEeprom>
+     95a:	e7 2c       	mov	r14, r7
+     95c:	f1 2c       	mov	r15, r1
+     95e:	fe 2c       	mov	r15, r14
+     960:	ee 24       	eor	r14, r14
+     962:	e8 2a       	or	r14, r24
+     964:	e1 14       	cp	r14, r1
+     966:	f1 04       	cpc	r15, r1
+     968:	a1 f0       	breq	.+40     	; 0x992 <ioDefragDirectConnect+0x14e>
+     96a:	0e 15       	cp	r16, r14
+     96c:	1f 05       	cpc	r17, r15
+     96e:	59 f4       	brne	.+22     	; 0x986 <ioDefragDirectConnect+0x142>
+     970:	6c 2f       	mov	r22, r28
+     972:	c4 01       	movw	r24, r8
+     974:	b1 dd       	rcall	.-1182   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     976:	67 2d       	mov	r22, r7
+     978:	c5 01       	movw	r24, r10
+     97a:	03 96       	adiw	r24, 0x03	; 3
+     97c:	ad dd       	rcall	.-1190   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+     97e:	80 e4       	ldi	r24, 0x40	; 64
+     980:	c8 2e       	mov	r12, r24
+     982:	d1 2c       	mov	r13, r1
+     984:	06 c0       	rjmp	.+12     	; 0x992 <ioDefragDirectConnect+0x14e>
+     986:	c7 01       	movw	r24, r14
+     988:	03 96       	adiw	r24, 0x03	; 3
+     98a:	a0 dd       	rcall	.-1216   	; 0x4cc <hcI2cReadByteFromEeprom>
+     98c:	78 2e       	mov	r7, r24
+     98e:	57 01       	movw	r10, r14
+     990:	db cf       	rjmp	.-74     	; 0x948 <ioDefragDirectConnect+0x104>
+     992:	84 e0       	ldi	r24, 0x04	; 4
+     994:	c8 0e       	add	r12, r24
+     996:	d1 1c       	adc	r13, r1
+     998:	80 e4       	ldi	r24, 0x40	; 64
+     99a:	c8 16       	cp	r12, r24
+     99c:	d1 04       	cpc	r13, r1
+     99e:	78 f2       	brcs	.-98     	; 0x93e <ioDefragDirectConnect+0xfa>
+     9a0:	25 96       	adiw	r28, 0x05	; 5
+     9a2:	68 cf       	rjmp	.-304    	; 0x874 <ioDefragDirectConnect+0x30>
+     9a4:	df 91       	pop	r29
+     9a6:	cf 91       	pop	r28
+     9a8:	1f 91       	pop	r17
+     9aa:	0f 91       	pop	r16
+     9ac:	ff 90       	pop	r15
+     9ae:	ef 90       	pop	r14
+     9b0:	df 90       	pop	r13
+     9b2:	cf 90       	pop	r12
+     9b4:	bf 90       	pop	r11
+     9b6:	af 90       	pop	r10
+     9b8:	9f 90       	pop	r9
+     9ba:	8f 90       	pop	r8
+     9bc:	7f 90       	pop	r7
+     9be:	6f 90       	pop	r6
+     9c0:	08 95       	ret
+
+000009c2 <ioGetConfiguration>:
+     9c2:	80 e1       	ldi	r24, 0x10	; 16
+     9c4:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hcI2cWriteBuffer>
+     9c8:	81 e0       	ldi	r24, 0x01	; 1
+     9ca:	08 95       	ret
+
+000009cc <ioGetStatus>:
+     9cc:	1f 93       	push	r17
+     9ce:	cf 93       	push	r28
+     9d0:	df 93       	push	r29
+     9d2:	10 92 d3 00 	sts	0x00D3, r1	; 0x8000d3 <ioBufferPos>
+     9d6:	40 e0       	ldi	r20, 0x00	; 0
+     9d8:	50 e0       	ldi	r21, 0x00	; 0
+     9da:	1c e0       	ldi	r17, 0x0C	; 12
+     9dc:	e0 91 d3 00 	lds	r30, 0x00D3	; 0x8000d3 <ioBufferPos>
+     9e0:	81 e0       	ldi	r24, 0x01	; 1
+     9e2:	8e 0f       	add	r24, r30
+     9e4:	80 93 d3 00 	sts	0x00D3, r24	; 0x8000d3 <ioBufferPos>
+     9e8:	14 9f       	mul	r17, r20
+     9ea:	d0 01       	movw	r26, r0
+     9ec:	15 9f       	mul	r17, r21
+     9ee:	b0 0d       	add	r27, r0
+     9f0:	11 24       	eor	r1, r1
+     9f2:	ed 01       	movw	r28, r26
+     9f4:	c1 5d       	subi	r28, 0xD1	; 209
+     9f6:	de 4f       	sbci	r29, 0xFE	; 254
+     9f8:	88 81       	ld	r24, Y
+     9fa:	c8 81       	ld	r28, Y
+     9fc:	a4 5d       	subi	r26, 0xD4	; 212
+     9fe:	be 4f       	sbci	r27, 0xFE	; 254
+     a00:	3c 91       	ld	r19, X
+     a02:	9c 91       	ld	r25, X
+     a04:	29 2f       	mov	r18, r25
+     a06:	21 70       	andi	r18, 0x01	; 1
+     a08:	f0 e0       	ldi	r31, 0x00	; 0
+     a0a:	ef 5f       	subi	r30, 0xFF	; 255
+     a0c:	fe 4f       	sbci	r31, 0xFE	; 254
+     a0e:	88 0f       	add	r24, r24
+     a10:	88 0f       	add	r24, r24
+     a12:	88 0f       	add	r24, r24
+     a14:	c5 fb       	bst	r28, 5
+     a16:	66 27       	eor	r22, r22
+     a18:	60 f9       	bld	r22, 0
+     a1a:	70 e0       	ldi	r23, 0x00	; 0
+     a1c:	eb 01       	movw	r28, r22
+     a1e:	cc 0f       	add	r28, r28
+     a20:	dd 1f       	adc	r29, r29
+     a22:	cc 0f       	add	r28, r28
+     a24:	dd 1f       	adc	r29, r29
+     a26:	8c 2b       	or	r24, r28
+     a28:	98 2f       	mov	r25, r24
+     a2a:	92 2b       	or	r25, r18
+     a2c:	83 2f       	mov	r24, r19
+     a2e:	82 70       	andi	r24, 0x02	; 2
+     a30:	89 2b       	or	r24, r25
+     a32:	80 83       	st	Z, r24
+     a34:	e0 91 d3 00 	lds	r30, 0x00D3	; 0x8000d3 <ioBufferPos>
+     a38:	81 e0       	ldi	r24, 0x01	; 1
+     a3a:	8e 0f       	add	r24, r30
+     a3c:	80 93 d3 00 	sts	0x00D3, r24	; 0x8000d3 <ioBufferPos>
+     a40:	11 96       	adiw	r26, 0x01	; 1
+     a42:	8d 91       	ld	r24, X+
+     a44:	9c 91       	ld	r25, X
+     a46:	12 97       	sbiw	r26, 0x02	; 2
+     a48:	f0 e0       	ldi	r31, 0x00	; 0
+     a4a:	ef 5f       	subi	r30, 0xFF	; 255
+     a4c:	fe 4f       	sbci	r31, 0xFE	; 254
+     a4e:	80 83       	st	Z, r24
+     a50:	4f 5f       	subi	r20, 0xFF	; 255
+     a52:	5f 4f       	sbci	r21, 0xFF	; 255
+     a54:	40 31       	cpi	r20, 0x10	; 16
+     a56:	51 05       	cpc	r21, r1
+     a58:	09 f6       	brne	.-126    	; 0x9dc <ioGetStatus+0x10>
+     a5a:	80 91 d3 00 	lds	r24, 0x00D3	; 0x8000d3 <ioBufferPos>
+     a5e:	df 91       	pop	r29
+     a60:	cf 91       	pop	r28
+     a62:	1f 91       	pop	r17
+     a64:	08 95       	ret
+
+00000a66 <ioGetChangedData>:
+     a66:	10 92 21 01 	sts	0x0121, r1	; 0x800121 <hcI2cDataChangedLength>
+     a6a:	b0 cf       	rjmp	.-160    	; 0x9cc <ioGetStatus>
+
+00000a6c <ioSetPort>:
+     a6c:	cf 92       	push	r12
+     a6e:	df 92       	push	r13
+     a70:	ef 92       	push	r14
+     a72:	ff 92       	push	r15
+     a74:	0f 93       	push	r16
+     a76:	1f 93       	push	r17
+     a78:	cf 93       	push	r28
+     a7a:	df 93       	push	r29
+     a7c:	40 31       	cpi	r20, 0x10	; 16
+     a7e:	08 f0       	brcs	.+2      	; 0xa82 <ioSetPort+0x16>
+     a80:	f0 c0       	rjmp	.+480    	; 0xc62 <ioSetPort+0x1f6>
+     a82:	a4 2f       	mov	r26, r20
+     a84:	b0 e0       	ldi	r27, 0x00	; 0
+     a86:	9c e0       	ldi	r25, 0x0C	; 12
+     a88:	49 9f       	mul	r20, r25
+     a8a:	80 01       	movw	r16, r0
+     a8c:	11 24       	eor	r1, r1
+     a8e:	a8 01       	movw	r20, r16
+     a90:	44 5d       	subi	r20, 0xD4	; 212
+     a92:	5e 4f       	sbci	r21, 0xFE	; 254
+     a94:	ea 01       	movw	r28, r20
+     a96:	78 81       	ld	r23, Y
+     a98:	98 2f       	mov	r25, r24
+     a9a:	91 70       	andi	r25, 0x01	; 1
+     a9c:	27 2f       	mov	r18, r23
+     a9e:	21 70       	andi	r18, 0x01	; 1
+     aa0:	30 e0       	ldi	r19, 0x00	; 0
+     aa2:	c9 2f       	mov	r28, r25
+     aa4:	d0 e0       	ldi	r29, 0x00	; 0
+     aa6:	2c 17       	cp	r18, r28
+     aa8:	3d 07       	cpc	r19, r29
+     aaa:	09 f4       	brne	.+2      	; 0xaae <ioSetPort+0x42>
+     aac:	6a c0       	rjmp	.+212    	; 0xb82 <ioSetPort+0x116>
+     aae:	ed 01       	movw	r28, r26
+     ab0:	c0 5a       	subi	r28, 0xA0	; 160
+     ab2:	df 4f       	sbci	r29, 0xFF	; 255
+     ab4:	9d 01       	movw	r18, r26
+     ab6:	22 0f       	add	r18, r18
+     ab8:	33 1f       	adc	r19, r19
+     aba:	99 23       	and	r25, r25
+     abc:	31 f1       	breq	.+76     	; 0xb0a <ioSetPort+0x9e>
+     abe:	48 81       	ld	r20, Y
+     ac0:	f9 01       	movw	r30, r18
+     ac2:	e0 57       	subi	r30, 0x70	; 112
+     ac4:	ff 4f       	sbci	r31, 0xFF	; 255
+     ac6:	00 81       	ld	r16, Z
+     ac8:	11 81       	ldd	r17, Z+1	; 0x01
+     aca:	f8 01       	movw	r30, r16
+     acc:	70 81       	ld	r23, Z
+     ace:	cc 24       	eor	r12, r12
+     ad0:	c3 94       	inc	r12
+     ad2:	d1 2c       	mov	r13, r1
+     ad4:	76 01       	movw	r14, r12
+     ad6:	02 c0       	rjmp	.+4      	; 0xadc <ioSetPort+0x70>
+     ad8:	ee 0c       	add	r14, r14
+     ada:	ff 1c       	adc	r15, r15
+     adc:	4a 95       	dec	r20
+     ade:	e2 f7       	brpl	.-8      	; 0xad8 <ioSetPort+0x6c>
+     ae0:	a7 01       	movw	r20, r14
+     ae2:	40 95       	com	r20
+     ae4:	50 95       	com	r21
+     ae6:	47 23       	and	r20, r23
+     ae8:	40 83       	st	Z, r20
+     aea:	58 81       	ld	r21, Y
+     aec:	e9 01       	movw	r28, r18
+     aee:	c0 55       	subi	r28, 0x50	; 80
+     af0:	df 4f       	sbci	r29, 0xFF	; 255
+     af2:	09 90       	ld	r0, Y+
+     af4:	d8 81       	ld	r29, Y
+     af6:	c0 2d       	mov	r28, r0
+     af8:	48 81       	ld	r20, Y
+     afa:	96 01       	movw	r18, r12
+     afc:	01 c0       	rjmp	.+2      	; 0xb00 <ioSetPort+0x94>
+     afe:	22 0f       	add	r18, r18
+     b00:	5a 95       	dec	r21
+     b02:	ea f7       	brpl	.-6      	; 0xafe <ioSetPort+0x92>
+     b04:	24 2b       	or	r18, r20
+     b06:	28 83       	st	Y, r18
+     b08:	30 c0       	rjmp	.+96     	; 0xb6a <ioSetPort+0xfe>
+     b0a:	fa 01       	movw	r30, r20
+     b0c:	12 82       	std	Z+2, r1	; 0x02
+     b0e:	11 82       	std	Z+1, r1	; 0x01
+     b10:	f8 01       	movw	r30, r16
+     b12:	e1 5d       	subi	r30, 0xD1	; 209
+     b14:	fe 4f       	sbci	r31, 0xFE	; 254
+     b16:	40 81       	ld	r20, Z
+     b18:	40 7e       	andi	r20, 0xE0	; 224
+     b1a:	40 83       	st	Z, r20
+     b1c:	40 81       	ld	r20, Z
+     b1e:	4f 7d       	andi	r20, 0xDF	; 223
+     b20:	40 83       	st	Z, r20
+     b22:	48 81       	ld	r20, Y
+     b24:	f9 01       	movw	r30, r18
+     b26:	e0 55       	subi	r30, 0x50	; 80
+     b28:	ff 4f       	sbci	r31, 0xFF	; 255
+     b2a:	01 90       	ld	r0, Z+
+     b2c:	f0 81       	ld	r31, Z
+     b2e:	e0 2d       	mov	r30, r0
+     b30:	70 81       	ld	r23, Z
+     b32:	01 e0       	ldi	r16, 0x01	; 1
+     b34:	10 e0       	ldi	r17, 0x00	; 0
+     b36:	78 01       	movw	r14, r16
+     b38:	02 c0       	rjmp	.+4      	; 0xb3e <ioSetPort+0xd2>
+     b3a:	ee 0c       	add	r14, r14
+     b3c:	ff 1c       	adc	r15, r15
+     b3e:	4a 95       	dec	r20
+     b40:	e2 f7       	brpl	.-8      	; 0xb3a <ioSetPort+0xce>
+     b42:	a7 01       	movw	r20, r14
+     b44:	40 95       	com	r20
+     b46:	50 95       	com	r21
+     b48:	47 23       	and	r20, r23
+     b4a:	40 83       	st	Z, r20
+     b4c:	58 81       	ld	r21, Y
+     b4e:	f9 01       	movw	r30, r18
+     b50:	e0 57       	subi	r30, 0x70	; 112
+     b52:	ff 4f       	sbci	r31, 0xFF	; 255
+     b54:	01 90       	ld	r0, Z+
+     b56:	f0 81       	ld	r31, Z
+     b58:	e0 2d       	mov	r30, r0
+     b5a:	40 81       	ld	r20, Z
+     b5c:	98 01       	movw	r18, r16
+     b5e:	01 c0       	rjmp	.+2      	; 0xb62 <ioSetPort+0xf6>
+     b60:	22 0f       	add	r18, r18
+     b62:	5a 95       	dec	r21
+     b64:	ea f7       	brpl	.-6      	; 0xb60 <ioSetPort+0xf4>
+     b66:	24 2b       	or	r18, r20
+     b68:	20 83       	st	Z, r18
+     b6a:	2c e0       	ldi	r18, 0x0C	; 12
+     b6c:	2a 9f       	mul	r18, r26
+     b6e:	f0 01       	movw	r30, r0
+     b70:	2b 9f       	mul	r18, r27
+     b72:	f0 0d       	add	r31, r0
+     b74:	11 24       	eor	r1, r1
+     b76:	e4 5d       	subi	r30, 0xD4	; 212
+     b78:	fe 4f       	sbci	r31, 0xFE	; 254
+     b7a:	20 81       	ld	r18, Z
+     b7c:	90 fb       	bst	r25, 0
+     b7e:	20 f9       	bld	r18, 0
+     b80:	20 83       	st	Z, r18
+     b82:	70 e0       	ldi	r23, 0x00	; 0
+     b84:	9c e0       	ldi	r25, 0x0C	; 12
+     b86:	9a 9f       	mul	r25, r26
+     b88:	f0 01       	movw	r30, r0
+     b8a:	9b 9f       	mul	r25, r27
+     b8c:	f0 0d       	add	r31, r0
+     b8e:	11 24       	eor	r1, r1
+     b90:	ef 01       	movw	r28, r30
+     b92:	c4 5d       	subi	r28, 0xD4	; 212
+     b94:	de 4f       	sbci	r29, 0xFE	; 254
+     b96:	7a 83       	std	Y+2, r23	; 0x02
+     b98:	69 83       	std	Y+1, r22	; 0x01
+     b9a:	e1 5d       	subi	r30, 0xD1	; 209
+     b9c:	fe 4f       	sbci	r31, 0xFE	; 254
+     b9e:	90 81       	ld	r25, Z
+     ba0:	90 7e       	andi	r25, 0xE0	; 224
+     ba2:	28 2f       	mov	r18, r24
+     ba4:	26 95       	lsr	r18
+     ba6:	26 95       	lsr	r18
+     ba8:	26 95       	lsr	r18
+     baa:	92 2b       	or	r25, r18
+     bac:	90 83       	st	Z, r25
+     bae:	1d 82       	std	Y+5, r1	; 0x05
+     bb0:	1c 82       	std	Y+4, r1	; 0x04
+     bb2:	98 81       	ld	r25, Y
+     bb4:	90 ff       	sbrs	r25, 0
+     bb6:	1d c0       	rjmp	.+58     	; 0xbf2 <ioSetPort+0x186>
+     bb8:	82 fb       	bst	r24, 2
+     bba:	88 27       	eor	r24, r24
+     bbc:	80 f9       	bld	r24, 0
+     bbe:	90 81       	ld	r25, Z
+     bc0:	80 fb       	bst	r24, 0
+     bc2:	95 f9       	bld	r25, 5
+     bc4:	90 83       	st	Z, r25
+     bc6:	88 81       	ld	r24, Y
+     bc8:	8d 7f       	andi	r24, 0xFD	; 253
+     bca:	88 83       	st	Y, r24
+     bcc:	80 81       	ld	r24, Z
+     bce:	85 ff       	sbrs	r24, 5
+     bd0:	48 c0       	rjmp	.+144    	; 0xc62 <ioSetPort+0x1f6>
+     bd2:	89 81       	ldd	r24, Y+1	; 0x01
+     bd4:	9a 81       	ldd	r25, Y+2	; 0x02
+     bd6:	89 2b       	or	r24, r25
+     bd8:	09 f4       	brne	.+2      	; 0xbdc <ioSetPort+0x170>
+     bda:	43 c0       	rjmp	.+134    	; 0xc62 <ioSetPort+0x1f6>
+     bdc:	89 81       	ldd	r24, Y+1	; 0x01
+     bde:	9a 81       	ldd	r25, Y+2	; 0x02
+     be0:	9d 83       	std	Y+5, r25	; 0x05
+     be2:	8c 83       	std	Y+4, r24	; 0x04
+     be4:	8f ef       	ldi	r24, 0xFF	; 255
+     be6:	90 e0       	ldi	r25, 0x00	; 0
+     be8:	9a 83       	std	Y+2, r25	; 0x02
+     bea:	89 83       	std	Y+1, r24	; 0x01
+     bec:	80 81       	ld	r24, Z
+     bee:	8f 7d       	andi	r24, 0xDF	; 223
+     bf0:	37 c0       	rjmp	.+110    	; 0xc60 <ioSetPort+0x1f4>
+     bf2:	fd 01       	movw	r30, r26
+     bf4:	e0 5a       	subi	r30, 0xA0	; 160
+     bf6:	ff 4f       	sbci	r31, 0xFF	; 255
+     bf8:	9d 01       	movw	r18, r26
+     bfa:	22 0f       	add	r18, r18
+     bfc:	33 1f       	adc	r19, r19
+     bfe:	81 fb       	bst	r24, 1
+     c00:	44 27       	eor	r20, r20
+     c02:	40 f9       	bld	r20, 0
+     c04:	50 81       	ld	r21, Z
+     c06:	f9 01       	movw	r30, r18
+     c08:	81 ff       	sbrs	r24, 1
+     c0a:	0e c0       	rjmp	.+28     	; 0xc28 <ioSetPort+0x1bc>
+     c0c:	e0 57       	subi	r30, 0x70	; 112
+     c0e:	ff 4f       	sbci	r31, 0xFF	; 255
+     c10:	01 90       	ld	r0, Z+
+     c12:	f0 81       	ld	r31, Z
+     c14:	e0 2d       	mov	r30, r0
+     c16:	20 81       	ld	r18, Z
+     c18:	81 e0       	ldi	r24, 0x01	; 1
+     c1a:	90 e0       	ldi	r25, 0x00	; 0
+     c1c:	01 c0       	rjmp	.+2      	; 0xc20 <ioSetPort+0x1b4>
+     c1e:	88 0f       	add	r24, r24
+     c20:	5a 95       	dec	r21
+     c22:	ea f7       	brpl	.-6      	; 0xc1e <ioSetPort+0x1b2>
+     c24:	82 2b       	or	r24, r18
+     c26:	10 c0       	rjmp	.+32     	; 0xc48 <ioSetPort+0x1dc>
+     c28:	e0 55       	subi	r30, 0x50	; 80
+     c2a:	ff 4f       	sbci	r31, 0xFF	; 255
+     c2c:	01 90       	ld	r0, Z+
+     c2e:	f0 81       	ld	r31, Z
+     c30:	e0 2d       	mov	r30, r0
+     c32:	20 81       	ld	r18, Z
+     c34:	81 e0       	ldi	r24, 0x01	; 1
+     c36:	90 e0       	ldi	r25, 0x00	; 0
+     c38:	02 c0       	rjmp	.+4      	; 0xc3e <ioSetPort+0x1d2>
+     c3a:	88 0f       	add	r24, r24
+     c3c:	99 1f       	adc	r25, r25
+     c3e:	5a 95       	dec	r21
+     c40:	e2 f7       	brpl	.-8      	; 0xc3a <ioSetPort+0x1ce>
+     c42:	80 95       	com	r24
+     c44:	90 95       	com	r25
+     c46:	82 23       	and	r24, r18
+     c48:	80 83       	st	Z, r24
+     c4a:	8c e0       	ldi	r24, 0x0C	; 12
+     c4c:	8a 9f       	mul	r24, r26
+     c4e:	f0 01       	movw	r30, r0
+     c50:	8b 9f       	mul	r24, r27
+     c52:	f0 0d       	add	r31, r0
+     c54:	11 24       	eor	r1, r1
+     c56:	e4 5d       	subi	r30, 0xD4	; 212
+     c58:	fe 4f       	sbci	r31, 0xFE	; 254
+     c5a:	80 81       	ld	r24, Z
+     c5c:	40 fb       	bst	r20, 0
+     c5e:	81 f9       	bld	r24, 1
+     c60:	80 83       	st	Z, r24
+     c62:	df 91       	pop	r29
+     c64:	cf 91       	pop	r28
+     c66:	1f 91       	pop	r17
+     c68:	0f 91       	pop	r16
+     c6a:	ff 90       	pop	r15
+     c6c:	ef 90       	pop	r14
+     c6e:	df 90       	pop	r13
+     c70:	cf 90       	pop	r12
+     c72:	08 95       	ret
+
+00000c74 <ioLoadStatusFromEeprom>:
+     c74:	bf 92       	push	r11
+     c76:	cf 92       	push	r12
+     c78:	df 92       	push	r13
+     c7a:	ef 92       	push	r14
+     c7c:	ff 92       	push	r15
+     c7e:	0f 93       	push	r16
+     c80:	1f 93       	push	r17
+     c82:	cf 93       	push	r28
+     c84:	df 93       	push	r29
+     c86:	1f 92       	push	r1
+     c88:	cd b7       	in	r28, 0x3d	; 61
+     c8a:	de b7       	in	r29, 0x3e	; 62
+     c8c:	19 82       	std	Y+1, r1	; 0x01
+     c8e:	00 e0       	ldi	r16, 0x00	; 0
+     c90:	10 e0       	ldi	r17, 0x00	; 0
+     c92:	8c e0       	ldi	r24, 0x0C	; 12
+     c94:	d8 2e       	mov	r13, r24
+     c96:	89 81       	ldd	r24, Y+1	; 0x01
+     c98:	80 31       	cpi	r24, 0x10	; 16
+     c9a:	70 f5       	brcc	.+92     	; 0xcf8 <ioLoadStatusFromEeprom+0x84>
+     c9c:	c8 01       	movw	r24, r16
+     c9e:	16 dc       	rcall	.-2004   	; 0x4cc <hcI2cReadByteFromEeprom>
+     ca0:	c8 2e       	mov	r12, r24
+     ca2:	c8 01       	movw	r24, r16
+     ca4:	01 96       	adiw	r24, 0x01	; 1
+     ca6:	12 dc       	rcall	.-2012   	; 0x4cc <hcI2cReadByteFromEeprom>
+     ca8:	b8 2e       	mov	r11, r24
+     caa:	c8 01       	movw	r24, r16
+     cac:	02 96       	adiw	r24, 0x02	; 2
+     cae:	0e dc       	rcall	.-2020   	; 0x4cc <hcI2cReadByteFromEeprom>
+     cb0:	f8 2e       	mov	r15, r24
+     cb2:	c8 01       	movw	r24, r16
+     cb4:	03 96       	adiw	r24, 0x03	; 3
+     cb6:	0c 5f       	subi	r16, 0xFC	; 252
+     cb8:	1f 4f       	sbci	r17, 0xFF	; 255
+     cba:	08 dc       	rcall	.-2032   	; 0x4cc <hcI2cReadByteFromEeprom>
+     cbc:	e8 2e       	mov	r14, r24
+     cbe:	8f ef       	ldi	r24, 0xFF	; 255
+     cc0:	e8 12       	cpse	r14, r24
+     cc2:	02 c0       	rjmp	.+4      	; 0xcc8 <ioLoadStatusFromEeprom+0x54>
+     cc4:	80 e0       	ldi	r24, 0x00	; 0
+     cc6:	19 c0       	rjmp	.+50     	; 0xcfa <ioLoadStatusFromEeprom+0x86>
+     cc8:	49 81       	ldd	r20, Y+1	; 0x01
+     cca:	6b 2d       	mov	r22, r11
+     ccc:	8c 2d       	mov	r24, r12
+     cce:	ce de       	rcall	.-612    	; 0xa6c <ioSetPort>
+     cd0:	e9 81       	ldd	r30, Y+1	; 0x01
+     cd2:	de 9e       	mul	r13, r30
+     cd4:	f0 01       	movw	r30, r0
+     cd6:	11 24       	eor	r1, r1
+     cd8:	e4 5d       	subi	r30, 0xD4	; 212
+     cda:	fe 4f       	sbci	r31, 0xFE	; 254
+     cdc:	80 81       	ld	r24, Z
+     cde:	80 fd       	sbrc	r24, 0
+     ce0:	07 c0       	rjmp	.+14     	; 0xcf0 <ioLoadStatusFromEeprom+0x7c>
+     ce2:	8f 2d       	mov	r24, r15
+     ce4:	90 e0       	ldi	r25, 0x00	; 0
+     ce6:	be 01       	movw	r22, r28
+     ce8:	6f 5f       	subi	r22, 0xFF	; 255
+     cea:	7f 4f       	sbci	r23, 0xFF	; 255
+     cec:	9e 29       	or	r25, r14
+     cee:	46 dc       	rcall	.-1908   	; 0x57c <ioExecuteDirectConnect>
+     cf0:	89 81       	ldd	r24, Y+1	; 0x01
+     cf2:	8f 5f       	subi	r24, 0xFF	; 255
+     cf4:	89 83       	std	Y+1, r24	; 0x01
+     cf6:	cf cf       	rjmp	.-98     	; 0xc96 <ioLoadStatusFromEeprom+0x22>
+     cf8:	8f ef       	ldi	r24, 0xFF	; 255
+     cfa:	0f 90       	pop	r0
+     cfc:	df 91       	pop	r29
+     cfe:	cf 91       	pop	r28
+     d00:	1f 91       	pop	r17
+     d02:	0f 91       	pop	r16
+     d04:	ff 90       	pop	r15
+     d06:	ef 90       	pop	r14
+     d08:	df 90       	pop	r13
+     d0a:	cf 90       	pop	r12
+     d0c:	bf 90       	pop	r11
+     d0e:	08 95       	ret
+
+00000d10 <ioInit>:
+     d10:	af 92       	push	r10
+     d12:	bf 92       	push	r11
+     d14:	cf 92       	push	r12
+     d16:	df 92       	push	r13
+     d18:	ef 92       	push	r14
+     d1a:	ff 92       	push	r15
+     d1c:	0f 93       	push	r16
+     d1e:	1f 93       	push	r17
+     d20:	cf 93       	push	r28
+     d22:	df 93       	push	r29
+     d24:	60 e9       	ldi	r22, 0x90	; 144
+     d26:	70 e0       	ldi	r23, 0x00	; 0
+     d28:	c0 eb       	ldi	r28, 0xB0	; 176
+     d2a:	d0 e0       	ldi	r29, 0x00	; 0
+     d2c:	80 e7       	ldi	r24, 0x70	; 112
+     d2e:	a8 2e       	mov	r10, r24
+     d30:	80 e0       	ldi	r24, 0x00	; 0
+     d32:	b8 2e       	mov	r11, r24
+     d34:	80 e0       	ldi	r24, 0x00	; 0
+     d36:	90 e0       	ldi	r25, 0x00	; 0
+     d38:	2c e0       	ldi	r18, 0x0C	; 12
+     d3a:	d2 2e       	mov	r13, r18
+     d3c:	41 e0       	ldi	r20, 0x01	; 1
+     d3e:	50 e0       	ldi	r21, 0x00	; 0
+     d40:	d8 9e       	mul	r13, r24
+     d42:	90 01       	movw	r18, r0
+     d44:	d9 9e       	mul	r13, r25
+     d46:	30 0d       	add	r19, r0
+     d48:	11 24       	eor	r1, r1
+     d4a:	f9 01       	movw	r30, r18
+     d4c:	e4 5d       	subi	r30, 0xD4	; 212
+     d4e:	fe 4f       	sbci	r31, 0xFE	; 254
+     d50:	10 81       	ld	r17, Z
+     d52:	1e 7f       	andi	r17, 0xFE	; 254
+     d54:	10 83       	st	Z, r17
+     d56:	10 81       	ld	r17, Z
+     d58:	12 60       	ori	r17, 0x02	; 2
+     d5a:	10 83       	st	Z, r17
+     d5c:	12 82       	std	Z+2, r1	; 0x02
+     d5e:	11 82       	std	Z+1, r1	; 0x01
+     d60:	f9 01       	movw	r30, r18
+     d62:	e1 5d       	subi	r30, 0xD1	; 209
+     d64:	fe 4f       	sbci	r31, 0xFE	; 254
+     d66:	20 81       	ld	r18, Z
+     d68:	20 7e       	andi	r18, 0xE0	; 224
+     d6a:	20 83       	st	Z, r18
+     d6c:	8c 01       	movw	r16, r24
+     d6e:	00 5a       	subi	r16, 0xA0	; 160
+     d70:	1f 4f       	sbci	r17, 0xFF	; 255
+     d72:	d8 01       	movw	r26, r16
+     d74:	2c 91       	ld	r18, X
+     d76:	db 01       	movw	r26, r22
+     d78:	ed 90       	ld	r14, X+
+     d7a:	fd 90       	ld	r15, X+
+     d7c:	bd 01       	movw	r22, r26
+     d7e:	d7 01       	movw	r26, r14
+     d80:	cc 90       	ld	r12, X
+     d82:	da 01       	movw	r26, r20
+     d84:	02 c0       	rjmp	.+4      	; 0xd8a <ioInit+0x7a>
+     d86:	aa 0f       	add	r26, r26
+     d88:	bb 1f       	adc	r27, r27
+     d8a:	2a 95       	dec	r18
+     d8c:	e2 f7       	brpl	.-8      	; 0xd86 <ioInit+0x76>
+     d8e:	9d 01       	movw	r18, r26
+     d90:	2c 29       	or	r18, r12
+     d92:	d7 01       	movw	r26, r14
+     d94:	2c 93       	st	X, r18
+     d96:	d8 01       	movw	r26, r16
+     d98:	2c 91       	ld	r18, X
+     d9a:	e9 90       	ld	r14, Y+
+     d9c:	f9 90       	ld	r15, Y+
+     d9e:	d7 01       	movw	r26, r14
+     da0:	cc 90       	ld	r12, X
+     da2:	da 01       	movw	r26, r20
+     da4:	02 c0       	rjmp	.+4      	; 0xdaa <ioInit+0x9a>
+     da6:	aa 0f       	add	r26, r26
+     da8:	bb 1f       	adc	r27, r27
+     daa:	2a 95       	dec	r18
+     dac:	e2 f7       	brpl	.-8      	; 0xda6 <ioInit+0x96>
+     dae:	9d 01       	movw	r18, r26
+     db0:	20 95       	com	r18
+     db2:	30 95       	com	r19
+     db4:	2c 21       	and	r18, r12
+     db6:	d7 01       	movw	r26, r14
+     db8:	2c 93       	st	X, r18
+     dba:	d5 01       	movw	r26, r10
+     dbc:	2d 91       	ld	r18, X+
+     dbe:	3d 91       	ld	r19, X+
+     dc0:	5d 01       	movw	r10, r26
+     dc2:	d9 01       	movw	r26, r18
+     dc4:	2c 91       	ld	r18, X
+     dc6:	d8 01       	movw	r26, r16
+     dc8:	1c 91       	ld	r17, X
+     dca:	30 e0       	ldi	r19, 0x00	; 0
+     dcc:	02 c0       	rjmp	.+4      	; 0xdd2 <ioInit+0xc2>
+     dce:	35 95       	asr	r19
+     dd0:	27 95       	ror	r18
+     dd2:	1a 95       	dec	r17
+     dd4:	e2 f7       	brpl	.-8      	; 0xdce <ioInit+0xbe>
+     dd6:	30 81       	ld	r19, Z
+     dd8:	20 fb       	bst	r18, 0
+     dda:	35 f9       	bld	r19, 5
+     ddc:	30 83       	st	Z, r19
+     dde:	01 96       	adiw	r24, 0x01	; 1
+     de0:	80 31       	cpi	r24, 0x10	; 16
+     de2:	91 05       	cpc	r25, r1
+     de4:	09 f0       	breq	.+2      	; 0xde8 <ioInit+0xd8>
+     de6:	ac cf       	rjmp	.-168    	; 0xd40 <ioInit+0x30>
+     de8:	80 e4       	ldi	r24, 0x40	; 64
+     dea:	90 e0       	ldi	r25, 0x00	; 0
+     dec:	90 93 d9 00 	sts	0x00D9, r25	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     df0:	80 93 d8 00 	sts	0x00D8, r24	; 0x8000d8 <hcI2cEepromPosition>
+     df4:	c6 ef       	ldi	r28, 0xF6	; 246
+     df6:	d1 e0       	ldi	r29, 0x01	; 1
+     df8:	80 91 d8 00 	lds	r24, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+     dfc:	90 91 d9 00 	lds	r25, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     e00:	c8 17       	cp	r28, r24
+     e02:	d9 07       	cpc	r29, r25
+     e04:	60 f0       	brcs	.+24     	; 0xe1e <ioInit+0x10e>
+     e06:	ce 01       	movw	r24, r28
+     e08:	61 db       	rcall	.-2366   	; 0x4cc <hcI2cReadByteFromEeprom>
+     e0a:	8f 3f       	cpi	r24, 0xFF	; 255
+     e0c:	31 f0       	breq	.+12     	; 0xe1a <ioInit+0x10a>
+     e0e:	22 96       	adiw	r28, 0x02	; 2
+     e10:	d0 93 d9 00 	sts	0x00D9, r29	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     e14:	c0 93 d8 00 	sts	0x00D8, r28	; 0x8000d8 <hcI2cEepromPosition>
+     e18:	02 c0       	rjmp	.+4      	; 0xe1e <ioInit+0x10e>
+     e1a:	25 97       	sbiw	r28, 0x05	; 5
+     e1c:	ed cf       	rjmp	.-38     	; 0xdf8 <ioInit+0xe8>
+     e1e:	2a df       	rcall	.-428    	; 0xc74 <ioLoadStatusFromEeprom>
+     e20:	80 e2       	ldi	r24, 0x20	; 32
+     e22:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <hcI2cDataChangedLength>
+     e26:	df 91       	pop	r29
+     e28:	cf 91       	pop	r28
+     e2a:	1f 91       	pop	r17
+     e2c:	0f 91       	pop	r16
+     e2e:	ff 90       	pop	r15
+     e30:	ef 90       	pop	r14
+     e32:	df 90       	pop	r13
+     e34:	cf 90       	pop	r12
+     e36:	bf 90       	pop	r11
+     e38:	af 90       	pop	r10
+     e3a:	08 95       	ret
+
+00000e3c <ioGetData>:
+     e3c:	cf 92       	push	r12
+     e3e:	df 92       	push	r13
+     e40:	ef 92       	push	r14
+     e42:	ff 92       	push	r15
+     e44:	1f 93       	push	r17
+     e46:	cf 93       	push	r28
+     e48:	df 93       	push	r29
+     e4a:	e0 91 de 00 	lds	r30, 0x00DE	; 0x8000de <hcI2cReadBuffer>
+     e4e:	e7 38       	cpi	r30, 0x87	; 135
+     e50:	09 f4       	brne	.+2      	; 0xe54 <ioGetData+0x18>
+     e52:	56 c0       	rjmp	.+172    	; 0xf00 <ioGetData+0xc4>
+     e54:	e8 38       	cpi	r30, 0x88	; 136
+     e56:	09 f4       	brne	.+2      	; 0xe5a <ioGetData+0x1e>
+     e58:	55 c0       	rjmp	.+170    	; 0xf04 <ioGetData+0xc8>
+     e5a:	e5 38       	cpi	r30, 0x85	; 133
+     e5c:	09 f0       	breq	.+2      	; 0xe60 <ioGetData+0x24>
+     e5e:	58 c0       	rjmp	.+176    	; 0xf10 <ioGetData+0xd4>
+     e60:	80 91 d0 00 	lds	r24, 0x00D0	; 0x8000d0 <ioGetDirectConnectIo>
+     e64:	8f 3f       	cpi	r24, 0xFF	; 255
+     e66:	11 f4       	brne	.+4      	; 0xe6c <ioGetData+0x30>
+     e68:	81 e0       	ldi	r24, 0x01	; 1
+     e6a:	26 c0       	rjmp	.+76     	; 0xeb8 <ioGetData+0x7c>
+     e6c:	c0 91 d0 00 	lds	r28, 0x00D0	; 0x8000d0 <ioGetDirectConnectIo>
+     e70:	24 e0       	ldi	r18, 0x04	; 4
+     e72:	c2 9f       	mul	r28, r18
+     e74:	e0 01       	movw	r28, r0
+     e76:	11 24       	eor	r1, r1
+     e78:	21 97       	sbiw	r28, 0x01	; 1
+     e7a:	8f ef       	ldi	r24, 0xFF	; 255
+     e7c:	80 93 d0 00 	sts	0x00D0, r24	; 0x8000d0 <ioGetDirectConnectIo>
+     e80:	10 e0       	ldi	r17, 0x00	; 0
+     e82:	05 c0       	rjmp	.+10     	; 0xe8e <ioGetData+0x52>
+     e84:	d0 e0       	ldi	r29, 0x00	; 0
+     e86:	d8 2b       	or	r29, r24
+     e88:	20 97       	sbiw	r28, 0x00	; 0
+     e8a:	99 f0       	breq	.+38     	; 0xeb2 <ioGetData+0x76>
+     e8c:	1f 5f       	subi	r17, 0xFF	; 255
+     e8e:	80 91 d2 00 	lds	r24, 0x00D2	; 0x8000d2 <__data_end>
+     e92:	9e 01       	movw	r18, r28
+     e94:	2d 5f       	subi	r18, 0xFD	; 253
+     e96:	3f 4f       	sbci	r19, 0xFF	; 255
+     e98:	79 01       	movw	r14, r18
+     e9a:	2f 5f       	subi	r18, 0xFF	; 255
+     e9c:	3f 4f       	sbci	r19, 0xFF	; 255
+     e9e:	69 01       	movw	r12, r18
+     ea0:	81 17       	cp	r24, r17
+     ea2:	70 f0       	brcs	.+28     	; 0xec0 <ioGetData+0x84>
+     ea4:	c7 01       	movw	r24, r14
+     ea6:	12 db       	rcall	.-2524   	; 0x4cc <hcI2cReadByteFromEeprom>
+     ea8:	c8 2f       	mov	r28, r24
+     eaa:	c6 01       	movw	r24, r12
+     eac:	0f db       	rcall	.-2530   	; 0x4cc <hcI2cReadByteFromEeprom>
+     eae:	8f 3f       	cpi	r24, 0xFF	; 255
+     eb0:	49 f7       	brne	.-46     	; 0xe84 <ioGetData+0x48>
+     eb2:	10 92 d2 00 	sts	0x00D2, r1	; 0x8000d2 <__data_end>
+     eb6:	82 e0       	ldi	r24, 0x02	; 2
+     eb8:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <hcI2cWriteBuffer+0x3>
+     ebc:	84 e0       	ldi	r24, 0x04	; 4
+     ebe:	51 c0       	rjmp	.+162    	; 0xf62 <ioGetData+0x126>
+     ec0:	10 92 d2 00 	sts	0x00D2, r1	; 0x8000d2 <__data_end>
+     ec4:	ce 01       	movw	r24, r28
+     ec6:	02 db       	rcall	.-2556   	; 0x4cc <hcI2cReadByteFromEeprom>
+     ec8:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hcI2cWriteBuffer>
+     ecc:	ce 01       	movw	r24, r28
+     ece:	01 96       	adiw	r24, 0x01	; 1
+     ed0:	fd da       	rcall	.-2566   	; 0x4cc <hcI2cReadByteFromEeprom>
+     ed2:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <hcI2cWriteBuffer+0x1>
+     ed6:	ce 01       	movw	r24, r28
+     ed8:	02 96       	adiw	r24, 0x02	; 2
+     eda:	f8 da       	rcall	.-2576   	; 0x4cc <hcI2cReadByteFromEeprom>
+     edc:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <hcI2cWriteBuffer+0x2>
+     ee0:	10 92 04 01 	sts	0x0104, r1	; 0x800104 <hcI2cWriteBuffer+0x3>
+     ee4:	c6 01       	movw	r24, r12
+     ee6:	f2 da       	rcall	.-2588   	; 0x4cc <hcI2cReadByteFromEeprom>
+     ee8:	c8 2f       	mov	r28, r24
+     eea:	c7 01       	movw	r24, r14
+     eec:	ef da       	rcall	.-2594   	; 0x4cc <hcI2cReadByteFromEeprom>
+     eee:	2c 2f       	mov	r18, r28
+     ef0:	30 e0       	ldi	r19, 0x00	; 0
+     ef2:	32 2f       	mov	r19, r18
+     ef4:	22 27       	eor	r18, r18
+     ef6:	28 2b       	or	r18, r24
+     ef8:	23 2b       	or	r18, r19
+     efa:	01 f3       	breq	.-64     	; 0xebc <ioGetData+0x80>
+     efc:	8f ef       	ldi	r24, 0xFF	; 255
+     efe:	dc cf       	rjmp	.-72     	; 0xeb8 <ioGetData+0x7c>
+     f00:	b9 de       	rcall	.-654    	; 0xc74 <ioLoadStatusFromEeprom>
+     f02:	02 c0       	rjmp	.+4      	; 0xf08 <ioGetData+0xcc>
+     f04:	80 91 d1 00 	lds	r24, 0x00D1	; 0x8000d1 <ioDirectConnectStatus>
+     f08:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hcI2cWriteBuffer>
+     f0c:	81 e0       	ldi	r24, 0x01	; 1
+     f0e:	29 c0       	rjmp	.+82     	; 0xf62 <ioGetData+0x126>
+     f10:	e0 31       	cpi	r30, 0x10	; 16
+     f12:	30 f5       	brcc	.+76     	; 0xf60 <ioGetData+0x124>
+     f14:	3c e0       	ldi	r19, 0x0C	; 12
+     f16:	e3 9f       	mul	r30, r19
+     f18:	f0 01       	movw	r30, r0
+     f1a:	11 24       	eor	r1, r1
+     f1c:	df 01       	movw	r26, r30
+     f1e:	a1 5d       	subi	r26, 0xD1	; 209
+     f20:	be 4f       	sbci	r27, 0xFE	; 254
+     f22:	9c 91       	ld	r25, X
+     f24:	3c 91       	ld	r19, X
+     f26:	e4 5d       	subi	r30, 0xD4	; 212
+     f28:	fe 4f       	sbci	r31, 0xFE	; 254
+     f2a:	80 81       	ld	r24, Z
+     f2c:	20 81       	ld	r18, Z
+     f2e:	21 70       	andi	r18, 0x01	; 1
+     f30:	99 0f       	add	r25, r25
+     f32:	99 0f       	add	r25, r25
+     f34:	99 0f       	add	r25, r25
+     f36:	35 fb       	bst	r19, 5
+     f38:	44 27       	eor	r20, r20
+     f3a:	40 f9       	bld	r20, 0
+     f3c:	50 e0       	ldi	r21, 0x00	; 0
+     f3e:	44 0f       	add	r20, r20
+     f40:	55 1f       	adc	r21, r21
+     f42:	44 0f       	add	r20, r20
+     f44:	55 1f       	adc	r21, r21
+     f46:	49 2b       	or	r20, r25
+     f48:	94 2f       	mov	r25, r20
+     f4a:	92 2b       	or	r25, r18
+     f4c:	82 70       	andi	r24, 0x02	; 2
+     f4e:	89 2b       	or	r24, r25
+     f50:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <hcI2cWriteBuffer>
+     f54:	81 81       	ldd	r24, Z+1	; 0x01
+     f56:	92 81       	ldd	r25, Z+2	; 0x02
+     f58:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <hcI2cWriteBuffer+0x1>
+     f5c:	82 e0       	ldi	r24, 0x02	; 2
+     f5e:	01 c0       	rjmp	.+2      	; 0xf62 <ioGetData+0x126>
+     f60:	80 e0       	ldi	r24, 0x00	; 0
+     f62:	df 91       	pop	r29
+     f64:	cf 91       	pop	r28
+     f66:	1f 91       	pop	r17
+     f68:	ff 90       	pop	r15
+     f6a:	ef 90       	pop	r14
+     f6c:	df 90       	pop	r13
+     f6e:	cf 90       	pop	r12
+     f70:	08 95       	ret
+
+00000f72 <ioSetData>:
+     f72:	bf 92       	push	r11
+     f74:	cf 92       	push	r12
+     f76:	df 92       	push	r13
+     f78:	ef 92       	push	r14
+     f7a:	ff 92       	push	r15
+     f7c:	0f 93       	push	r16
+     f7e:	1f 93       	push	r17
+     f80:	cf 93       	push	r28
+     f82:	df 93       	push	r29
+     f84:	40 91 de 00 	lds	r20, 0x00DE	; 0x8000de <hcI2cReadBuffer>
+     f88:	84 2f       	mov	r24, r20
+     f8a:	90 e0       	ldi	r25, 0x00	; 0
+     f8c:	fc 01       	movw	r30, r24
+     f8e:	e0 58       	subi	r30, 0x80	; 128
+     f90:	f1 09       	sbc	r31, r1
+     f92:	e9 30       	cpi	r30, 0x09	; 9
+     f94:	f1 05       	cpc	r31, r1
+     f96:	08 f0       	brcs	.+2      	; 0xf9a <ioSetData+0x28>
+     f98:	e0 c1       	rjmp	.+960    	; 0x135a <ioSetData+0x3e8>
+     f9a:	e3 5a       	subi	r30, 0xA3	; 163
+     f9c:	ff 4f       	sbci	r31, 0xFF	; 255
+     f9e:	09 94       	ijmp
+     fa0:	72 d9       	rcall	.-3356   	; 0x286 <hcI2cCheckDeviceId>
+     fa2:	88 23       	and	r24, r24
+     fa4:	09 f4       	brne	.+2      	; 0xfa8 <ioSetData+0x36>
+     fa6:	e7 c1       	rjmp	.+974    	; 0x1376 <ioSetData+0x404>
+     fa8:	c0 91 e2 00 	lds	r28, 0x00E2	; 0x8000e2 <hcI2cReadBuffer+0x4>
+     fac:	24 e0       	ldi	r18, 0x04	; 4
+     fae:	c2 9f       	mul	r28, r18
+     fb0:	e0 01       	movw	r28, r0
+     fb2:	11 24       	eor	r1, r1
+     fb4:	8e 01       	movw	r16, r28
+     fb6:	01 50       	subi	r16, 0x01	; 1
+     fb8:	11 09       	sbc	r17, r1
+     fba:	ce 01       	movw	r24, r28
+     fbc:	03 96       	adiw	r24, 0x03	; 3
+     fbe:	86 da       	rcall	.-2804   	; 0x4cc <hcI2cReadByteFromEeprom>
+     fc0:	f8 2e       	mov	r15, r24
+     fc2:	ce 01       	movw	r24, r28
+     fc4:	02 96       	adiw	r24, 0x02	; 2
+     fc6:	82 da       	rcall	.-2812   	; 0x4cc <hcI2cReadByteFromEeprom>
+     fc8:	4f ef       	ldi	r20, 0xFF	; 255
+     fca:	f4 16       	cp	r15, r20
+     fcc:	29 f0       	breq	.+10     	; 0xfd8 <ioSetData+0x66>
+     fce:	c8 2f       	mov	r28, r24
+     fd0:	d0 e0       	ldi	r29, 0x00	; 0
+     fd2:	df 29       	or	r29, r15
+     fd4:	20 97       	sbiw	r28, 0x00	; 0
+     fd6:	69 f4       	brne	.+26     	; 0xff2 <ioSetData+0x80>
+     fd8:	80 91 d8 00 	lds	r24, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+     fdc:	90 91 d9 00 	lds	r25, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     fe0:	89 2b       	or	r24, r25
+     fe2:	81 f4       	brne	.+32     	; 0x1004 <ioSetData+0x92>
+     fe4:	80 e4       	ldi	r24, 0x40	; 64
+     fe6:	90 e0       	ldi	r25, 0x00	; 0
+     fe8:	90 93 d9 00 	sts	0x00D9, r25	; 0x8000d9 <hcI2cEepromPosition+0x1>
+     fec:	80 93 d8 00 	sts	0x00D8, r24	; 0x8000d8 <hcI2cEepromPosition>
+     ff0:	09 c0       	rjmp	.+18     	; 0x1004 <ioSetData+0x92>
+     ff2:	ce 01       	movw	r24, r28
+     ff4:	04 96       	adiw	r24, 0x04	; 4
+     ff6:	6a da       	rcall	.-2860   	; 0x4cc <hcI2cReadByteFromEeprom>
+     ff8:	f8 2e       	mov	r15, r24
+     ffa:	ce 01       	movw	r24, r28
+     ffc:	03 96       	adiw	r24, 0x03	; 3
+     ffe:	66 da       	rcall	.-2868   	; 0x4cc <hcI2cReadByteFromEeprom>
+    1000:	8e 01       	movw	r16, r28
+    1002:	e2 cf       	rjmp	.-60     	; 0xfc8 <ioSetData+0x56>
+    1004:	60 91 d8 00 	lds	r22, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+    1008:	70 91 d9 00 	lds	r23, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    100c:	cb 01       	movw	r24, r22
+    100e:	05 96       	adiw	r24, 0x05	; 5
+    1010:	89 3f       	cpi	r24, 0xF9	; 249
+    1012:	91 40       	sbci	r25, 0x01	; 1
+    1014:	08 f0       	brcs	.+2      	; 0x1018 <ioSetData+0xa6>
+    1016:	af c1       	rjmp	.+862    	; 0x1376 <ioSetData+0x404>
+    1018:	c8 01       	movw	r24, r16
+    101a:	03 96       	adiw	r24, 0x03	; 3
+    101c:	5d da       	rcall	.-2886   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    101e:	60 91 d9 00 	lds	r22, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    1022:	c8 01       	movw	r24, r16
+    1024:	04 96       	adiw	r24, 0x04	; 4
+    1026:	58 da       	rcall	.-2896   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    1028:	60 91 e3 00 	lds	r22, 0x00E3	; 0x8000e3 <hcI2cReadBuffer+0x5>
+    102c:	80 91 d8 00 	lds	r24, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+    1030:	90 91 d9 00 	lds	r25, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    1034:	9c 01       	movw	r18, r24
+    1036:	2f 5f       	subi	r18, 0xFF	; 255
+    1038:	3f 4f       	sbci	r19, 0xFF	; 255
+    103a:	30 93 d9 00 	sts	0x00D9, r19	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    103e:	20 93 d8 00 	sts	0x00D8, r18	; 0x8000d8 <hcI2cEepromPosition>
+    1042:	47 da       	rcall	.-2930   	; 0x4d2 <hcI2cWriteByteToEeprom>
+    1044:	60 91 e4 00 	lds	r22, 0x00E4	; 0x8000e4 <hcI2cReadBuffer+0x6>
+    1048:	80 91 d8 00 	lds	r24, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+    104c:	90 91 d9 00 	lds	r25, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    1050:	9c 01       	movw	r18, r24
+    1052:	2f 5f       	subi	r18, 0xFF	; 255
+    1054:	3f 4f       	sbci	r19, 0xFF	; 255
+    1056:	30 93 d9 00 	sts	0x00D9, r19	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    105a:	20 93 d8 00 	sts	0x00D8, r18	; 0x8000d8 <hcI2cEepromPosition>
+    105e:	39 da       	rcall	.-2958   	; 0x4d2 <hcI2cWriteByteToEeprom>
+    1060:	60 91 e5 00 	lds	r22, 0x00E5	; 0x8000e5 <hcI2cReadBuffer+0x7>
+    1064:	80 91 d8 00 	lds	r24, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+    1068:	90 91 d9 00 	lds	r25, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    106c:	9c 01       	movw	r18, r24
+    106e:	2f 5f       	subi	r18, 0xFF	; 255
+    1070:	3f 4f       	sbci	r19, 0xFF	; 255
+    1072:	30 93 d9 00 	sts	0x00D9, r19	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    1076:	20 93 d8 00 	sts	0x00D8, r18	; 0x8000d8 <hcI2cEepromPosition>
+    107a:	2b da       	rcall	.-2986   	; 0x4d2 <hcI2cWriteByteToEeprom>
+    107c:	80 91 d8 00 	lds	r24, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+    1080:	90 91 d9 00 	lds	r25, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    1084:	9c 01       	movw	r18, r24
+    1086:	2f 5f       	subi	r18, 0xFF	; 255
+    1088:	3f 4f       	sbci	r19, 0xFF	; 255
+    108a:	30 93 d9 00 	sts	0x00D9, r19	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    108e:	20 93 d8 00 	sts	0x00D8, r18	; 0x8000d8 <hcI2cEepromPosition>
+    1092:	60 e0       	ldi	r22, 0x00	; 0
+    1094:	1e da       	rcall	.-3012   	; 0x4d2 <hcI2cWriteByteToEeprom>
+    1096:	80 91 d8 00 	lds	r24, 0x00D8	; 0x8000d8 <hcI2cEepromPosition>
+    109a:	90 91 d9 00 	lds	r25, 0x00D9	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    109e:	9c 01       	movw	r18, r24
+    10a0:	2f 5f       	subi	r18, 0xFF	; 255
+    10a2:	3f 4f       	sbci	r19, 0xFF	; 255
+    10a4:	30 93 d9 00 	sts	0x00D9, r19	; 0x8000d9 <hcI2cEepromPosition+0x1>
+    10a8:	20 93 d8 00 	sts	0x00D8, r18	; 0x8000d8 <hcI2cEepromPosition>
+    10ac:	60 e0       	ldi	r22, 0x00	; 0
+    10ae:	df 91       	pop	r29
+    10b0:	cf 91       	pop	r28
+    10b2:	1f 91       	pop	r17
+    10b4:	0f 91       	pop	r16
+    10b6:	ff 90       	pop	r15
+    10b8:	ef 90       	pop	r14
+    10ba:	df 90       	pop	r13
+    10bc:	cf 90       	pop	r12
+    10be:	bf 90       	pop	r11
+    10c0:	08 ca       	rjmp	.-3056   	; 0x4d2 <hcI2cWriteByteToEeprom>
+    10c2:	e1 d8       	rcall	.-3646   	; 0x286 <hcI2cCheckDeviceId>
+    10c4:	88 23       	and	r24, r24
+    10c6:	09 f4       	brne	.+2      	; 0x10ca <ioSetData+0x158>
+    10c8:	56 c1       	rjmp	.+684    	; 0x1376 <ioSetData+0x404>
+    10ca:	c0 91 e2 00 	lds	r28, 0x00E2	; 0x8000e2 <hcI2cReadBuffer+0x4>
+    10ce:	84 e0       	ldi	r24, 0x04	; 4
+    10d0:	c8 9f       	mul	r28, r24
+    10d2:	e0 01       	movw	r28, r0
+    10d4:	11 24       	eor	r1, r1
+    10d6:	21 97       	sbiw	r28, 0x01	; 1
+    10d8:	10 e0       	ldi	r17, 0x00	; 0
+    10da:	80 91 e3 00 	lds	r24, 0x00E3	; 0x8000e3 <hcI2cReadBuffer+0x5>
+    10de:	81 17       	cp	r24, r17
+    10e0:	b8 f0       	brcs	.+46     	; 0x1110 <ioSetData+0x19e>
+    10e2:	ce 01       	movw	r24, r28
+    10e4:	04 96       	adiw	r24, 0x04	; 4
+    10e6:	f2 d9       	rcall	.-3100   	; 0x4cc <hcI2cReadByteFromEeprom>
+    10e8:	08 2f       	mov	r16, r24
+    10ea:	8f 3f       	cpi	r24, 0xFF	; 255
+    10ec:	09 f4       	brne	.+2      	; 0x10f0 <ioSetData+0x17e>
+    10ee:	43 c1       	rjmp	.+646    	; 0x1376 <ioSetData+0x404>
+    10f0:	ce 01       	movw	r24, r28
+    10f2:	03 96       	adiw	r24, 0x03	; 3
+    10f4:	eb d9       	rcall	.-3114   	; 0x4cc <hcI2cReadByteFromEeprom>
+    10f6:	c0 2f       	mov	r28, r16
+    10f8:	d0 e0       	ldi	r29, 0x00	; 0
+    10fa:	dc 2f       	mov	r29, r28
+    10fc:	cc 27       	eor	r28, r28
+    10fe:	c8 2b       	or	r28, r24
+    1100:	ce 01       	movw	r24, r28
+    1102:	01 97       	sbiw	r24, 0x01	; 1
+    1104:	88 3f       	cpi	r24, 0xF8	; 248
+    1106:	91 40       	sbci	r25, 0x01	; 1
+    1108:	08 f0       	brcs	.+2      	; 0x110c <ioSetData+0x19a>
+    110a:	35 c1       	rjmp	.+618    	; 0x1376 <ioSetData+0x404>
+    110c:	1f 5f       	subi	r17, 0xFF	; 255
+    110e:	e5 cf       	rjmp	.-54     	; 0x10da <ioSetData+0x168>
+    1110:	60 91 e4 00 	lds	r22, 0x00E4	; 0x8000e4 <hcI2cReadBuffer+0x6>
+    1114:	ce 01       	movw	r24, r28
+    1116:	e0 d9       	rcall	.-3136   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    1118:	60 91 e5 00 	lds	r22, 0x00E5	; 0x8000e5 <hcI2cReadBuffer+0x7>
+    111c:	ce 01       	movw	r24, r28
+    111e:	01 96       	adiw	r24, 0x01	; 1
+    1120:	db d9       	rcall	.-3146   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    1122:	60 91 e6 00 	lds	r22, 0x00E6	; 0x8000e6 <hcI2cReadBuffer+0x8>
+    1126:	ce 01       	movw	r24, r28
+    1128:	02 96       	adiw	r24, 0x02	; 2
+    112a:	50 c0       	rjmp	.+160    	; 0x11cc <ioSetData+0x25a>
+    112c:	ac d8       	rcall	.-3752   	; 0x286 <hcI2cCheckDeviceId>
+    112e:	88 23       	and	r24, r24
+    1130:	09 f4       	brne	.+2      	; 0x1134 <ioSetData+0x1c2>
+    1132:	21 c1       	rjmp	.+578    	; 0x1376 <ioSetData+0x404>
+    1134:	c0 91 e2 00 	lds	r28, 0x00E2	; 0x8000e2 <hcI2cReadBuffer+0x4>
+    1138:	f4 e0       	ldi	r31, 0x04	; 4
+    113a:	cf 9f       	mul	r28, r31
+    113c:	e0 01       	movw	r28, r0
+    113e:	11 24       	eor	r1, r1
+    1140:	21 97       	sbiw	r28, 0x01	; 1
+    1142:	d1 2c       	mov	r13, r1
+    1144:	e1 2c       	mov	r14, r1
+    1146:	f1 2c       	mov	r15, r1
+    1148:	80 91 e3 00 	lds	r24, 0x00E3	; 0x8000e3 <hcI2cReadBuffer+0x5>
+    114c:	8e 01       	movw	r16, r28
+    114e:	0c 5f       	subi	r16, 0xFC	; 252
+    1150:	1f 4f       	sbci	r17, 0xFF	; 255
+    1152:	8d 15       	cp	r24, r13
+    1154:	d8 f0       	brcs	.+54     	; 0x118c <ioSetData+0x21a>
+    1156:	c8 01       	movw	r24, r16
+    1158:	b9 d9       	rcall	.-3214   	; 0x4cc <hcI2cReadByteFromEeprom>
+    115a:	18 2f       	mov	r17, r24
+    115c:	8f 3f       	cpi	r24, 0xFF	; 255
+    115e:	09 f4       	brne	.+2      	; 0x1162 <ioSetData+0x1f0>
+    1160:	0a c1       	rjmp	.+532    	; 0x1376 <ioSetData+0x404>
+    1162:	ce 01       	movw	r24, r28
+    1164:	03 96       	adiw	r24, 0x03	; 3
+    1166:	b2 d9       	rcall	.-3228   	; 0x4cc <hcI2cReadByteFromEeprom>
+    1168:	21 2f       	mov	r18, r17
+    116a:	30 e0       	ldi	r19, 0x00	; 0
+    116c:	32 2f       	mov	r19, r18
+    116e:	22 27       	eor	r18, r18
+    1170:	a9 01       	movw	r20, r18
+    1172:	48 2b       	or	r20, r24
+    1174:	ca 01       	movw	r24, r20
+    1176:	9c 01       	movw	r18, r24
+    1178:	21 50       	subi	r18, 0x01	; 1
+    117a:	31 09       	sbc	r19, r1
+    117c:	28 3f       	cpi	r18, 0xF8	; 248
+    117e:	31 40       	sbci	r19, 0x01	; 1
+    1180:	08 f0       	brcs	.+2      	; 0x1184 <ioSetData+0x212>
+    1182:	f9 c0       	rjmp	.+498    	; 0x1376 <ioSetData+0x404>
+    1184:	d3 94       	inc	r13
+    1186:	7e 01       	movw	r14, r28
+    1188:	ec 01       	movw	r28, r24
+    118a:	de cf       	rjmp	.-68     	; 0x1148 <ioSetData+0x1d6>
+    118c:	6e 01       	movw	r12, r28
+    118e:	83 e0       	ldi	r24, 0x03	; 3
+    1190:	c8 0e       	add	r12, r24
+    1192:	d1 1c       	adc	r13, r1
+    1194:	c6 01       	movw	r24, r12
+    1196:	9a d9       	rcall	.-3276   	; 0x4cc <hcI2cReadByteFromEeprom>
+    1198:	68 2f       	mov	r22, r24
+    119a:	c7 01       	movw	r24, r14
+    119c:	03 96       	adiw	r24, 0x03	; 3
+    119e:	9c d9       	rcall	.-3272   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    11a0:	c8 01       	movw	r24, r16
+    11a2:	94 d9       	rcall	.-3288   	; 0x4cc <hcI2cReadByteFromEeprom>
+    11a4:	68 2f       	mov	r22, r24
+    11a6:	c7 01       	movw	r24, r14
+    11a8:	04 96       	adiw	r24, 0x04	; 4
+    11aa:	96 d9       	rcall	.-3284   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    11ac:	6f ef       	ldi	r22, 0xFF	; 255
+    11ae:	ce 01       	movw	r24, r28
+    11b0:	93 d9       	rcall	.-3290   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    11b2:	6f ef       	ldi	r22, 0xFF	; 255
+    11b4:	ce 01       	movw	r24, r28
+    11b6:	01 96       	adiw	r24, 0x01	; 1
+    11b8:	8f d9       	rcall	.-3298   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    11ba:	6f ef       	ldi	r22, 0xFF	; 255
+    11bc:	ce 01       	movw	r24, r28
+    11be:	02 96       	adiw	r24, 0x02	; 2
+    11c0:	8b d9       	rcall	.-3306   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    11c2:	6f ef       	ldi	r22, 0xFF	; 255
+    11c4:	c6 01       	movw	r24, r12
+    11c6:	88 d9       	rcall	.-3312   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    11c8:	6f ef       	ldi	r22, 0xFF	; 255
+    11ca:	c8 01       	movw	r24, r16
+    11cc:	df 91       	pop	r29
+    11ce:	cf 91       	pop	r28
+    11d0:	1f 91       	pop	r17
+    11d2:	0f 91       	pop	r16
+    11d4:	ff 90       	pop	r15
+    11d6:	ef 90       	pop	r14
+    11d8:	df 90       	pop	r13
+    11da:	cf 90       	pop	r12
+    11dc:	bf 90       	pop	r11
+    11de:	7c c9       	rjmp	.-3336   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    11e0:	52 d8       	rcall	.-3932   	; 0x286 <hcI2cCheckDeviceId>
+    11e2:	88 23       	and	r24, r24
+    11e4:	09 f4       	brne	.+2      	; 0x11e8 <ioSetData+0x276>
+    11e6:	c7 c0       	rjmp	.+398    	; 0x1376 <ioSetData+0x404>
+    11e8:	00 91 e2 00 	lds	r16, 0x00E2	; 0x8000e2 <hcI2cReadBuffer+0x4>
+    11ec:	94 e0       	ldi	r25, 0x04	; 4
+    11ee:	09 9f       	mul	r16, r25
+    11f0:	80 01       	movw	r16, r0
+    11f2:	11 24       	eor	r1, r1
+    11f4:	e8 01       	movw	r28, r16
+    11f6:	23 96       	adiw	r28, 0x03	; 3
+    11f8:	ce 01       	movw	r24, r28
+    11fa:	68 d9       	rcall	.-3376   	; 0x4cc <hcI2cReadByteFromEeprom>
+    11fc:	f8 2e       	mov	r15, r24
+    11fe:	0e 5f       	subi	r16, 0xFE	; 254
+    1200:	1f 4f       	sbci	r17, 0xFF	; 255
+    1202:	c8 01       	movw	r24, r16
+    1204:	63 d9       	rcall	.-3386   	; 0x4cc <hcI2cReadByteFromEeprom>
+    1206:	e8 2e       	mov	r14, r24
+    1208:	60 e0       	ldi	r22, 0x00	; 0
+    120a:	c8 01       	movw	r24, r16
+    120c:	65 d9       	rcall	.-3382   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    120e:	60 e0       	ldi	r22, 0x00	; 0
+    1210:	ce 01       	movw	r24, r28
+    1212:	62 d9       	rcall	.-3388   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    1214:	2f ef       	ldi	r18, 0xFF	; 255
+    1216:	f2 16       	cp	r15, r18
+    1218:	09 f4       	brne	.+2      	; 0x121c <ioSetData+0x2aa>
+    121a:	ad c0       	rjmp	.+346    	; 0x1376 <ioSetData+0x404>
+    121c:	ce 2d       	mov	r28, r14
+    121e:	d0 e0       	ldi	r29, 0x00	; 0
+    1220:	df 29       	or	r29, r15
+    1222:	ce 01       	movw	r24, r28
+    1224:	01 97       	sbiw	r24, 0x01	; 1
+    1226:	88 3f       	cpi	r24, 0xF8	; 248
+    1228:	91 40       	sbci	r25, 0x01	; 1
+    122a:	08 f0       	brcs	.+2      	; 0x122e <ioSetData+0x2bc>
+    122c:	a4 c0       	rjmp	.+328    	; 0x1376 <ioSetData+0x404>
+    122e:	8e 01       	movw	r16, r28
+    1230:	0c 5f       	subi	r16, 0xFC	; 252
+    1232:	1f 4f       	sbci	r17, 0xFF	; 255
+    1234:	c8 01       	movw	r24, r16
+    1236:	4a d9       	rcall	.-3436   	; 0x4cc <hcI2cReadByteFromEeprom>
+    1238:	f8 2e       	mov	r15, r24
+    123a:	6e 01       	movw	r12, r28
+    123c:	f3 e0       	ldi	r31, 0x03	; 3
+    123e:	cf 0e       	add	r12, r31
+    1240:	d1 1c       	adc	r13, r1
+    1242:	c6 01       	movw	r24, r12
+    1244:	43 d9       	rcall	.-3450   	; 0x4cc <hcI2cReadByteFromEeprom>
+    1246:	e8 2e       	mov	r14, r24
+    1248:	6f ef       	ldi	r22, 0xFF	; 255
+    124a:	ce 01       	movw	r24, r28
+    124c:	45 d9       	rcall	.-3446   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    124e:	6f ef       	ldi	r22, 0xFF	; 255
+    1250:	ce 01       	movw	r24, r28
+    1252:	01 96       	adiw	r24, 0x01	; 1
+    1254:	41 d9       	rcall	.-3454   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    1256:	6f ef       	ldi	r22, 0xFF	; 255
+    1258:	ce 01       	movw	r24, r28
+    125a:	02 96       	adiw	r24, 0x02	; 2
+    125c:	3d d9       	rcall	.-3462   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    125e:	6f ef       	ldi	r22, 0xFF	; 255
+    1260:	c6 01       	movw	r24, r12
+    1262:	3a d9       	rcall	.-3468   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    1264:	6f ef       	ldi	r22, 0xFF	; 255
+    1266:	c8 01       	movw	r24, r16
+    1268:	d4 cf       	rjmp	.-88     	; 0x1212 <ioSetData+0x2a0>
+    126a:	80 91 e0 00 	lds	r24, 0x00E0	; 0x8000e0 <hcI2cReadBuffer+0x2>
+    126e:	80 93 d0 00 	sts	0x00D0, r24	; 0x8000d0 <ioGetDirectConnectIo>
+    1272:	80 91 e1 00 	lds	r24, 0x00E1	; 0x8000e1 <hcI2cReadBuffer+0x3>
+    1276:	80 93 d2 00 	sts	0x00D2, r24	; 0x8000d2 <__data_end>
+    127a:	7d c0       	rjmp	.+250    	; 0x1376 <ioSetData+0x404>
+    127c:	04 d8       	rcall	.-4088   	; 0x286 <hcI2cCheckDeviceId>
+    127e:	88 23       	and	r24, r24
+    1280:	09 f4       	brne	.+2      	; 0x1284 <ioSetData+0x312>
+    1282:	79 c0       	rjmp	.+242    	; 0x1376 <ioSetData+0x404>
+    1284:	df 91       	pop	r29
+    1286:	cf 91       	pop	r28
+    1288:	1f 91       	pop	r17
+    128a:	0f 91       	pop	r16
+    128c:	ff 90       	pop	r15
+    128e:	ef 90       	pop	r14
+    1290:	df 90       	pop	r13
+    1292:	cf 90       	pop	r12
+    1294:	bf 90       	pop	r11
+    1296:	d6 ca       	rjmp	.-2644   	; 0x844 <ioDefragDirectConnect>
+    1298:	f6 d7       	rcall	.+4076   	; 0x2286 <__TEXT_REGION_LENGTH__+0x286>
+    129a:	88 23       	and	r24, r24
+    129c:	09 f4       	brne	.+2      	; 0x12a0 <ioSetData+0x32e>
+    129e:	6b c0       	rjmp	.+214    	; 0x1376 <ioSetData+0x404>
+    12a0:	00 e0       	ldi	r16, 0x00	; 0
+    12a2:	10 e0       	ldi	r17, 0x00	; 0
+    12a4:	c0 e0       	ldi	r28, 0x00	; 0
+    12a6:	d0 e0       	ldi	r29, 0x00	; 0
+    12a8:	9c e0       	ldi	r25, 0x0C	; 12
+    12aa:	b9 2e       	mov	r11, r25
+    12ac:	b0 9e       	mul	r11, r16
+    12ae:	c0 01       	movw	r24, r0
+    12b0:	b1 9e       	mul	r11, r17
+    12b2:	90 0d       	add	r25, r0
+    12b4:	11 24       	eor	r1, r1
+    12b6:	fc 01       	movw	r30, r24
+    12b8:	e1 5d       	subi	r30, 0xD1	; 209
+    12ba:	fe 4f       	sbci	r31, 0xFE	; 254
+    12bc:	60 81       	ld	r22, Z
+    12be:	30 81       	ld	r19, Z
+    12c0:	ac 01       	movw	r20, r24
+    12c2:	44 5d       	subi	r20, 0xD4	; 212
+    12c4:	5e 4f       	sbci	r21, 0xFE	; 254
+    12c6:	6a 01       	movw	r12, r20
+    12c8:	fa 01       	movw	r30, r20
+    12ca:	20 81       	ld	r18, Z
+    12cc:	80 81       	ld	r24, Z
+    12ce:	98 2f       	mov	r25, r24
+    12d0:	91 70       	andi	r25, 0x01	; 1
+    12d2:	66 0f       	add	r22, r22
+    12d4:	66 0f       	add	r22, r22
+    12d6:	66 0f       	add	r22, r22
+    12d8:	35 fb       	bst	r19, 5
+    12da:	ee 24       	eor	r14, r14
+    12dc:	e0 f8       	bld	r14, 0
+    12de:	f1 2c       	mov	r15, r1
+    12e0:	a7 01       	movw	r20, r14
+    12e2:	44 0f       	add	r20, r20
+    12e4:	55 1f       	adc	r21, r21
+    12e6:	44 0f       	add	r20, r20
+    12e8:	55 1f       	adc	r21, r21
+    12ea:	64 2b       	or	r22, r20
+    12ec:	86 2f       	mov	r24, r22
+    12ee:	89 2b       	or	r24, r25
+    12f0:	62 2f       	mov	r22, r18
+    12f2:	62 70       	andi	r22, 0x02	; 2
+    12f4:	68 2b       	or	r22, r24
+    12f6:	ce 01       	movw	r24, r28
+    12f8:	ef d8       	rcall	.-3618   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    12fa:	f6 01       	movw	r30, r12
+    12fc:	61 81       	ldd	r22, Z+1	; 0x01
+    12fe:	72 81       	ldd	r23, Z+2	; 0x02
+    1300:	ce 01       	movw	r24, r28
+    1302:	01 96       	adiw	r24, 0x01	; 1
+    1304:	e9 d8       	rcall	.-3630   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    1306:	6e 01       	movw	r12, r28
+    1308:	f4 e0       	ldi	r31, 0x04	; 4
+    130a:	cf 0e       	add	r12, r31
+    130c:	d1 1c       	adc	r13, r1
+    130e:	c6 01       	movw	r24, r12
+    1310:	dd d8       	rcall	.-3654   	; 0x4cc <hcI2cReadByteFromEeprom>
+    1312:	8f 3f       	cpi	r24, 0xFF	; 255
+    1314:	41 f4       	brne	.+16     	; 0x1326 <ioSetData+0x3b4>
+    1316:	60 e0       	ldi	r22, 0x00	; 0
+    1318:	ce 01       	movw	r24, r28
+    131a:	02 96       	adiw	r24, 0x02	; 2
+    131c:	dd d8       	rcall	.-3654   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    131e:	60 e0       	ldi	r22, 0x00	; 0
+    1320:	ce 01       	movw	r24, r28
+    1322:	03 96       	adiw	r24, 0x03	; 3
+    1324:	d9 d8       	rcall	.-3662   	; 0x4d8 <hcI2cUpdateByteInEeprom>
+    1326:	0f 5f       	subi	r16, 0xFF	; 255
+    1328:	1f 4f       	sbci	r17, 0xFF	; 255
+    132a:	e6 01       	movw	r28, r12
+    132c:	c0 34       	cpi	r28, 0x40	; 64
+    132e:	d1 05       	cpc	r29, r1
+    1330:	09 f0       	breq	.+2      	; 0x1334 <ioSetData+0x3c2>
+    1332:	bc cf       	rjmp	.-136    	; 0x12ac <ioSetData+0x33a>
+    1334:	20 c0       	rjmp	.+64     	; 0x1376 <ioSetData+0x404>
+    1336:	80 91 e0 00 	lds	r24, 0x00E0	; 0x8000e0 <hcI2cReadBuffer+0x2>
+    133a:	80 93 d1 00 	sts	0x00D1, r24	; 0x8000d1 <ioDirectConnectStatus>
+    133e:	0e ed       	ldi	r16, 0xDE	; 222
+    1340:	10 e0       	ldi	r17, 0x00	; 0
+    1342:	c0 e0       	ldi	r28, 0x00	; 0
+    1344:	4c 2f       	mov	r20, r28
+    1346:	f8 01       	movw	r30, r16
+    1348:	63 81       	ldd	r22, Z+3	; 0x03
+    134a:	82 81       	ldd	r24, Z+2	; 0x02
+    134c:	8f db       	rcall	.-2274   	; 0xa6c <ioSetPort>
+    134e:	0e 5f       	subi	r16, 0xFE	; 254
+    1350:	1f 4f       	sbci	r17, 0xFF	; 255
+    1352:	cf 5f       	subi	r28, 0xFF	; 255
+    1354:	c0 31       	cpi	r28, 0x10	; 16
+    1356:	b1 f7       	brne	.-20     	; 0x1344 <ioSetData+0x3d2>
+    1358:	0e c0       	rjmp	.+28     	; 0x1376 <ioSetData+0x404>
+    135a:	60 91 e1 00 	lds	r22, 0x00E1	; 0x8000e1 <hcI2cReadBuffer+0x3>
+    135e:	80 91 e0 00 	lds	r24, 0x00E0	; 0x8000e0 <hcI2cReadBuffer+0x2>
+    1362:	df 91       	pop	r29
+    1364:	cf 91       	pop	r28
+    1366:	1f 91       	pop	r17
+    1368:	0f 91       	pop	r16
+    136a:	ff 90       	pop	r15
+    136c:	ef 90       	pop	r14
+    136e:	df 90       	pop	r13
+    1370:	cf 90       	pop	r12
+    1372:	bf 90       	pop	r11
+    1374:	7b cb       	rjmp	.-2314   	; 0xa6c <ioSetPort>
+    1376:	df 91       	pop	r29
+    1378:	cf 91       	pop	r28
+    137a:	1f 91       	pop	r17
+    137c:	0f 91       	pop	r16
+    137e:	ff 90       	pop	r15
+    1380:	ef 90       	pop	r14
+    1382:	df 90       	pop	r13
+    1384:	cf 90       	pop	r12
+    1386:	bf 90       	pop	r11
+    1388:	08 95       	ret
+
+0000138a <ioIsrEveryCall>:
+    138a:	2f 92       	push	r2
+    138c:	3f 92       	push	r3
+    138e:	4f 92       	push	r4
+    1390:	5f 92       	push	r5
+    1392:	6f 92       	push	r6
+    1394:	7f 92       	push	r7
+    1396:	8f 92       	push	r8
+    1398:	9f 92       	push	r9
+    139a:	af 92       	push	r10
+    139c:	bf 92       	push	r11
+    139e:	cf 92       	push	r12
+    13a0:	df 92       	push	r13
+    13a2:	ef 92       	push	r14
+    13a4:	ff 92       	push	r15
+    13a6:	0f 93       	push	r16
+    13a8:	1f 93       	push	r17
+    13aa:	cf 93       	push	r28
+    13ac:	df 93       	push	r29
+    13ae:	e0 90 d7 00 	lds	r14, 0x00D7	; 0x8000d7 <hcI2cInterruptCount>
+    13b2:	ee 20       	and	r14, r14
+    13b4:	09 f4       	brne	.+2      	; 0x13b8 <ioIsrEveryCall+0x2e>
+    13b6:	48 c1       	rjmp	.+656    	; 0x1648 <ioIsrEveryCall+0x2be>
+    13b8:	e0 e9       	ldi	r30, 0x90	; 144
+    13ba:	f0 e0       	ldi	r31, 0x00	; 0
+    13bc:	20 e0       	ldi	r18, 0x00	; 0
+    13be:	30 e0       	ldi	r19, 0x00	; 0
+    13c0:	1c e0       	ldi	r17, 0x0C	; 12
+    13c2:	f1 2e       	mov	r15, r17
+    13c4:	6e 2d       	mov	r22, r14
+    13c6:	70 e0       	ldi	r23, 0x00	; 0
+    13c8:	00 e2       	ldi	r16, 0x20	; 32
+    13ca:	50 2e       	mov	r5, r16
+    13cc:	22 24       	eor	r2, r2
+    13ce:	23 94       	inc	r2
+    13d0:	31 2c       	mov	r3, r1
+    13d2:	f2 9e       	mul	r15, r18
+    13d4:	d0 01       	movw	r26, r0
+    13d6:	f3 9e       	mul	r15, r19
+    13d8:	b0 0d       	add	r27, r0
+    13da:	11 24       	eor	r1, r1
+    13dc:	a4 5d       	subi	r26, 0xD4	; 212
+    13de:	be 4f       	sbci	r27, 0xFE	; 254
+    13e0:	8c 91       	ld	r24, X
+    13e2:	80 fd       	sbrc	r24, 0
+    13e4:	0b c0       	rjmp	.+22     	; 0x13fc <ioIsrEveryCall+0x72>
+    13e6:	d9 01       	movw	r26, r18
+    13e8:	a4 51       	subi	r26, 0x14	; 20
+    13ea:	be 4f       	sbci	r27, 0xFE	; 254
+    13ec:	8c 91       	ld	r24, X
+    13ee:	88 23       	and	r24, r24
+    13f0:	09 f4       	brne	.+2      	; 0x13f4 <ioIsrEveryCall+0x6a>
+    13f2:	23 c1       	rjmp	.+582    	; 0x163a <ioIsrEveryCall+0x2b0>
+    13f4:	8c 91       	ld	r24, X
+    13f6:	8e 0d       	add	r24, r14
+    13f8:	8c 93       	st	X, r24
+    13fa:	1f c1       	rjmp	.+574    	; 0x163a <ioIsrEveryCall+0x2b0>
+    13fc:	11 96       	adiw	r26, 0x01	; 1
+    13fe:	8d 91       	ld	r24, X+
+    1400:	9c 91       	ld	r25, X
+    1402:	12 97       	sbiw	r26, 0x02	; 2
+    1404:	89 2b       	or	r24, r25
+    1406:	51 f0       	breq	.+20     	; 0x141c <ioIsrEveryCall+0x92>
+    1408:	16 96       	adiw	r26, 0x06	; 6
+    140a:	8d 91       	ld	r24, X+
+    140c:	9c 91       	ld	r25, X
+    140e:	17 97       	sbiw	r26, 0x07	; 7
+    1410:	86 0f       	add	r24, r22
+    1412:	97 1f       	adc	r25, r23
+    1414:	17 96       	adiw	r26, 0x07	; 7
+    1416:	9c 93       	st	X, r25
+    1418:	8e 93       	st	-X, r24
+    141a:	16 97       	sbiw	r26, 0x06	; 6
+    141c:	f2 9e       	mul	r15, r18
+    141e:	a0 01       	movw	r20, r0
+    1420:	f3 9e       	mul	r15, r19
+    1422:	50 0d       	add	r21, r0
+    1424:	11 24       	eor	r1, r1
+    1426:	ea 01       	movw	r28, r20
+    1428:	c1 5d       	subi	r28, 0xD1	; 209
+    142a:	de 4f       	sbci	r29, 0xFE	; 254
+    142c:	88 81       	ld	r24, Y
+    142e:	8f 71       	andi	r24, 0x1F	; 31
+    1430:	09 f4       	brne	.+2      	; 0x1434 <ioIsrEveryCall+0xaa>
+    1432:	51 c0       	rjmp	.+162    	; 0x14d6 <ioIsrEveryCall+0x14c>
+    1434:	da 01       	movw	r26, r20
+    1436:	a4 5d       	subi	r26, 0xD4	; 212
+    1438:	be 4f       	sbci	r27, 0xFE	; 254
+    143a:	18 96       	adiw	r26, 0x08	; 8
+    143c:	8d 91       	ld	r24, X+
+    143e:	9c 91       	ld	r25, X
+    1440:	19 97       	sbiw	r26, 0x09	; 9
+    1442:	86 0f       	add	r24, r22
+    1444:	97 1f       	adc	r25, r23
+    1446:	19 96       	adiw	r26, 0x09	; 9
+    1448:	9c 93       	st	X, r25
+    144a:	8e 93       	st	-X, r24
+    144c:	18 97       	sbiw	r26, 0x08	; 8
+    144e:	18 96       	adiw	r26, 0x08	; 8
+    1450:	ad 90       	ld	r10, X+
+    1452:	bc 90       	ld	r11, X
+    1454:	19 97       	sbiw	r26, 0x09	; 9
+    1456:	88 81       	ld	r24, Y
+    1458:	8f 71       	andi	r24, 0x1F	; 31
+    145a:	48 2e       	mov	r4, r24
+    145c:	88 81       	ld	r24, Y
+    145e:	8f 71       	andi	r24, 0x1F	; 31
+    1460:	98 81       	ld	r25, Y
+    1462:	9f 71       	andi	r25, 0x1F	; 31
+    1464:	69 2e       	mov	r6, r25
+    1466:	98 81       	ld	r25, Y
+    1468:	9f 71       	andi	r25, 0x1F	; 31
+    146a:	89 2e       	mov	r8, r25
+    146c:	98 81       	ld	r25, Y
+    146e:	9f 71       	andi	r25, 0x1F	; 31
+    1470:	c9 2e       	mov	r12, r25
+    1472:	98 81       	ld	r25, Y
+    1474:	9f 71       	andi	r25, 0x1F	; 31
+    1476:	d9 2e       	mov	r13, r25
+    1478:	98 81       	ld	r25, Y
+    147a:	9f 71       	andi	r25, 0x1F	; 31
+    147c:	99 2e       	mov	r9, r25
+    147e:	98 81       	ld	r25, Y
+    1480:	9f 71       	andi	r25, 0x1F	; 31
+    1482:	79 2e       	mov	r7, r25
+    1484:	0b 2d       	mov	r16, r11
+    1486:	11 27       	eor	r17, r17
+    1488:	90 e0       	ldi	r25, 0x00	; 0
+    148a:	84 0d       	add	r24, r4
+    148c:	91 1d       	adc	r25, r1
+    148e:	86 0d       	add	r24, r6
+    1490:	91 1d       	adc	r25, r1
+    1492:	88 0d       	add	r24, r8
+    1494:	91 1d       	adc	r25, r1
+    1496:	8c 0d       	add	r24, r12
+    1498:	91 1d       	adc	r25, r1
+    149a:	8d 0d       	add	r24, r13
+    149c:	91 1d       	adc	r25, r1
+    149e:	89 0d       	add	r24, r9
+    14a0:	91 1d       	adc	r25, r1
+    14a2:	87 0d       	add	r24, r7
+    14a4:	91 1d       	adc	r25, r1
+    14a6:	08 17       	cp	r16, r24
+    14a8:	19 07       	cpc	r17, r25
+    14aa:	a8 f0       	brcs	.+42     	; 0x14d6 <ioIsrEveryCall+0x14c>
+    14ac:	19 96       	adiw	r26, 0x09	; 9
+    14ae:	1c 92       	st	X, r1
+    14b0:	1e 92       	st	-X, r1
+    14b2:	18 97       	sbiw	r26, 0x08	; 8
+    14b4:	da 01       	movw	r26, r20
+    14b6:	a9 5c       	subi	r26, 0xC9	; 201
+    14b8:	be 4f       	sbci	r27, 0xFE	; 254
+    14ba:	8c 91       	ld	r24, X
+    14bc:	82 95       	swap	r24
+    14be:	81 70       	andi	r24, 0x01	; 1
+    14c0:	8f 5f       	subi	r24, 0xFF	; 255
+    14c2:	da 01       	movw	r26, r20
+    14c4:	ac 5c       	subi	r26, 0xCC	; 204
+    14c6:	be 4f       	sbci	r27, 0xFE	; 254
+    14c8:	13 96       	adiw	r26, 0x03	; 3
+    14ca:	9c 91       	ld	r25, X
+    14cc:	13 97       	sbiw	r26, 0x03	; 3
+    14ce:	80 fb       	bst	r24, 0
+    14d0:	94 f9       	bld	r25, 4
+    14d2:	13 96       	adiw	r26, 0x03	; 3
+    14d4:	9c 93       	st	X, r25
+    14d6:	f2 9e       	mul	r15, r18
+    14d8:	d0 01       	movw	r26, r0
+    14da:	f3 9e       	mul	r15, r19
+    14dc:	b0 0d       	add	r27, r0
+    14de:	11 24       	eor	r1, r1
+    14e0:	cd 01       	movw	r24, r26
+    14e2:	81 5d       	subi	r24, 0xD1	; 209
+    14e4:	9e 4f       	sbci	r25, 0xFE	; 254
+    14e6:	ec 01       	movw	r28, r24
+    14e8:	88 81       	ld	r24, Y
+    14ea:	a9 01       	movw	r20, r18
+    14ec:	40 5a       	subi	r20, 0xA0	; 160
+    14ee:	5f 4f       	sbci	r21, 0xFF	; 255
+    14f0:	85 fd       	sbrc	r24, 5
+    14f2:	13 c0       	rjmp	.+38     	; 0x151a <ioIsrEveryCall+0x190>
+    14f4:	a4 5d       	subi	r26, 0xD4	; 212
+    14f6:	be 4f       	sbci	r27, 0xFE	; 254
+    14f8:	11 96       	adiw	r26, 0x01	; 1
+    14fa:	8d 91       	ld	r24, X+
+    14fc:	9c 91       	ld	r25, X
+    14fe:	12 97       	sbiw	r26, 0x02	; 2
+    1500:	89 2b       	or	r24, r25
+    1502:	89 f1       	breq	.+98     	; 0x1566 <ioIsrEveryCall+0x1dc>
+    1504:	16 96       	adiw	r26, 0x06	; 6
+    1506:	0d 91       	ld	r16, X+
+    1508:	1c 91       	ld	r17, X
+    150a:	17 97       	sbiw	r26, 0x07	; 7
+    150c:	11 96       	adiw	r26, 0x01	; 1
+    150e:	8d 91       	ld	r24, X+
+    1510:	9c 91       	ld	r25, X
+    1512:	12 97       	sbiw	r26, 0x02	; 2
+    1514:	08 17       	cp	r16, r24
+    1516:	19 07       	cpc	r17, r25
+    1518:	30 f1       	brcs	.+76     	; 0x1566 <ioIsrEveryCall+0x1dc>
+    151a:	f2 9e       	mul	r15, r18
+    151c:	c0 01       	movw	r24, r0
+    151e:	f3 9e       	mul	r15, r19
+    1520:	90 0d       	add	r25, r0
+    1522:	11 24       	eor	r1, r1
+    1524:	dc 01       	movw	r26, r24
+    1526:	a4 5d       	subi	r26, 0xD4	; 212
+    1528:	be 4f       	sbci	r27, 0xFE	; 254
+    152a:	17 96       	adiw	r26, 0x07	; 7
+    152c:	1c 92       	st	X, r1
+    152e:	1e 92       	st	-X, r1
+    1530:	16 97       	sbiw	r26, 0x06	; 6
+    1532:	dc 01       	movw	r26, r24
+    1534:	a1 5d       	subi	r26, 0xD1	; 209
+    1536:	be 4f       	sbci	r27, 0xFE	; 254
+    1538:	ac 91       	ld	r26, X
+    153a:	af 71       	andi	r26, 0x1F	; 31
+    153c:	31 f0       	breq	.+12     	; 0x154a <ioIsrEveryCall+0x1c0>
+    153e:	dc 01       	movw	r26, r24
+    1540:	a9 5c       	subi	r26, 0xC9	; 201
+    1542:	be 4f       	sbci	r27, 0xFE	; 254
+    1544:	8c 91       	ld	r24, X
+    1546:	84 ff       	sbrs	r24, 4
+    1548:	0e c0       	rjmp	.+28     	; 0x1566 <ioIsrEveryCall+0x1dc>
+    154a:	da 01       	movw	r26, r20
+    154c:	8c 91       	ld	r24, X
+    154e:	a0 81       	ld	r26, Z
+    1550:	b1 81       	ldd	r27, Z+1	; 0x01
+    1552:	4c 91       	ld	r20, X
+    1554:	e1 01       	movw	r28, r2
+    1556:	02 c0       	rjmp	.+4      	; 0x155c <ioIsrEveryCall+0x1d2>
+    1558:	cc 0f       	add	r28, r28
+    155a:	dd 1f       	adc	r29, r29
+    155c:	8a 95       	dec	r24
+    155e:	e2 f7       	brpl	.-8      	; 0x1558 <ioIsrEveryCall+0x1ce>
+    1560:	ce 01       	movw	r24, r28
+    1562:	84 2b       	or	r24, r20
+    1564:	0f c0       	rjmp	.+30     	; 0x1584 <ioIsrEveryCall+0x1fa>
+    1566:	da 01       	movw	r26, r20
+    1568:	8c 91       	ld	r24, X
+    156a:	a0 81       	ld	r26, Z
+    156c:	b1 81       	ldd	r27, Z+1	; 0x01
+    156e:	4c 91       	ld	r20, X
+    1570:	e1 01       	movw	r28, r2
+    1572:	02 c0       	rjmp	.+4      	; 0x1578 <ioIsrEveryCall+0x1ee>
+    1574:	cc 0f       	add	r28, r28
+    1576:	dd 1f       	adc	r29, r29
+    1578:	8a 95       	dec	r24
+    157a:	e2 f7       	brpl	.-8      	; 0x1574 <ioIsrEveryCall+0x1ea>
+    157c:	ce 01       	movw	r24, r28
+    157e:	80 95       	com	r24
+    1580:	90 95       	com	r25
+    1582:	84 23       	and	r24, r20
+    1584:	8c 93       	st	X, r24
+    1586:	f2 9e       	mul	r15, r18
+    1588:	a0 01       	movw	r20, r0
+    158a:	f3 9e       	mul	r15, r19
+    158c:	50 0d       	add	r21, r0
+    158e:	11 24       	eor	r1, r1
+    1590:	da 01       	movw	r26, r20
+    1592:	a4 5d       	subi	r26, 0xD4	; 212
+    1594:	be 4f       	sbci	r27, 0xFE	; 254
+    1596:	14 96       	adiw	r26, 0x04	; 4
+    1598:	8d 91       	ld	r24, X+
+    159a:	9c 91       	ld	r25, X
+    159c:	15 97       	sbiw	r26, 0x05	; 5
+    159e:	89 2b       	or	r24, r25
+    15a0:	09 f4       	brne	.+2      	; 0x15a4 <ioIsrEveryCall+0x21a>
+    15a2:	4b c0       	rjmp	.+150    	; 0x163a <ioIsrEveryCall+0x2b0>
+    15a4:	ca 01       	movw	r24, r20
+    15a6:	8a 5c       	subi	r24, 0xCA	; 202
+    15a8:	9e 4f       	sbci	r25, 0xFE	; 254
+    15aa:	6c 01       	movw	r12, r24
+    15ac:	ec 01       	movw	r28, r24
+    15ae:	88 81       	ld	r24, Y
+    15b0:	19 81       	ldd	r17, Y+1	; 0x01
+    15b2:	91 2f       	mov	r25, r17
+    15b4:	9f 70       	andi	r25, 0x0F	; 15
+    15b6:	86 0f       	add	r24, r22
+    15b8:	97 1f       	adc	r25, r23
+    15ba:	9f 70       	andi	r25, 0x0F	; 15
+    15bc:	8a 01       	movw	r16, r20
+    15be:	0c 5c       	subi	r16, 0xCC	; 204
+    15c0:	1e 4f       	sbci	r17, 0xFE	; 254
+    15c2:	e8 01       	movw	r28, r16
+    15c4:	8a 83       	std	Y+2, r24	; 0x02
+    15c6:	9f 70       	andi	r25, 0x0F	; 15
+    15c8:	8b 81       	ldd	r24, Y+3	; 0x03
+    15ca:	80 7f       	andi	r24, 0xF0	; 240
+    15cc:	89 2b       	or	r24, r25
+    15ce:	8b 83       	std	Y+3, r24	; 0x03
+    15d0:	e6 01       	movw	r28, r12
+    15d2:	88 81       	ld	r24, Y
+    15d4:	d9 80       	ldd	r13, Y+1	; 0x01
+    15d6:	9d 2d       	mov	r25, r13
+    15d8:	9f 70       	andi	r25, 0x0F	; 15
+    15da:	14 96       	adiw	r26, 0x04	; 4
+    15dc:	cd 90       	ld	r12, X+
+    15de:	dc 90       	ld	r13, X
+    15e0:	15 97       	sbiw	r26, 0x05	; 5
+    15e2:	c4 e0       	ldi	r28, 0x04	; 4
+    15e4:	95 95       	asr	r25
+    15e6:	87 95       	ror	r24
+    15e8:	ca 95       	dec	r28
+    15ea:	e1 f7       	brne	.-8      	; 0x15e4 <ioIsrEveryCall+0x25a>
+    15ec:	8c 15       	cp	r24, r12
+    15ee:	9d 05       	cpc	r25, r13
+    15f0:	20 f1       	brcs	.+72     	; 0x163a <ioIsrEveryCall+0x2b0>
+    15f2:	e8 01       	movw	r28, r16
+    15f4:	1a 82       	std	Y+2, r1	; 0x02
+    15f6:	8b 81       	ldd	r24, Y+3	; 0x03
+    15f8:	80 7f       	andi	r24, 0xF0	; 240
+    15fa:	8b 83       	std	Y+3, r24	; 0x03
+    15fc:	11 96       	adiw	r26, 0x01	; 1
+    15fe:	8d 91       	ld	r24, X+
+    1600:	9c 91       	ld	r25, X
+    1602:	12 97       	sbiw	r26, 0x02	; 2
+    1604:	01 97       	sbiw	r24, 0x01	; 1
+    1606:	12 96       	adiw	r26, 0x02	; 2
+    1608:	9c 93       	st	X, r25
+    160a:	8e 93       	st	-X, r24
+    160c:	11 97       	sbiw	r26, 0x01	; 1
+    160e:	17 96       	adiw	r26, 0x07	; 7
+    1610:	1c 92       	st	X, r1
+    1612:	1e 92       	st	-X, r1
+    1614:	16 97       	sbiw	r26, 0x06	; 6
+    1616:	11 96       	adiw	r26, 0x01	; 1
+    1618:	8d 91       	ld	r24, X+
+    161a:	9c 91       	ld	r25, X
+    161c:	12 97       	sbiw	r26, 0x02	; 2
+    161e:	89 2b       	or	r24, r25
+    1620:	61 f4       	brne	.+24     	; 0x163a <ioIsrEveryCall+0x2b0>
+    1622:	15 96       	adiw	r26, 0x05	; 5
+    1624:	1c 92       	st	X, r1
+    1626:	1e 92       	st	-X, r1
+    1628:	14 97       	sbiw	r26, 0x04	; 4
+    162a:	da 01       	movw	r26, r20
+    162c:	a1 5d       	subi	r26, 0xD1	; 209
+    162e:	be 4f       	sbci	r27, 0xFE	; 254
+    1630:	8c 91       	ld	r24, X
+    1632:	80 62       	ori	r24, 0x20	; 32
+    1634:	8c 93       	st	X, r24
+    1636:	50 92 21 01 	sts	0x0121, r5	; 0x800121 <hcI2cDataChangedLength>
+    163a:	2f 5f       	subi	r18, 0xFF	; 255
+    163c:	3f 4f       	sbci	r19, 0xFF	; 255
+    163e:	32 96       	adiw	r30, 0x02	; 2
+    1640:	20 31       	cpi	r18, 0x10	; 16
+    1642:	31 05       	cpc	r19, r1
+    1644:	09 f0       	breq	.+2      	; 0x1648 <ioIsrEveryCall+0x2be>
+    1646:	c5 ce       	rjmp	.-630    	; 0x13d2 <ioIsrEveryCall+0x48>
+    1648:	df 91       	pop	r29
+    164a:	cf 91       	pop	r28
+    164c:	1f 91       	pop	r17
+    164e:	0f 91       	pop	r16
+    1650:	ff 90       	pop	r15
+    1652:	ef 90       	pop	r14
+    1654:	df 90       	pop	r13
+    1656:	cf 90       	pop	r12
+    1658:	bf 90       	pop	r11
+    165a:	af 90       	pop	r10
+    165c:	9f 90       	pop	r9
+    165e:	8f 90       	pop	r8
+    1660:	7f 90       	pop	r7
+    1662:	6f 90       	pop	r6
+    1664:	5f 90       	pop	r5
+    1666:	4f 90       	pop	r4
+    1668:	3f 90       	pop	r3
+    166a:	2f 90       	pop	r2
+    166c:	08 95       	ret
+
+0000166e <main>:
+    166e:	4a d5       	rcall	.+2708   	; 0x2104 <__TEXT_REGION_LENGTH__+0x104>
+    1670:	4f db       	rcall	.-2402   	; 0xd10 <ioInit>
+    1672:	68 d8       	rcall	.-3888   	; 0x744 <ioReadInputs>
+    1674:	fe cf       	rjmp	.-4      	; 0x1672 <main+0x4>
+
+00001676 <getConfiguration>:
+    1676:	a5 c9       	rjmp	.-3254   	; 0x9c2 <ioGetConfiguration>
+
+00001678 <getStatus>:
+    1678:	a9 c9       	rjmp	.-3246   	; 0x9cc <ioGetStatus>
+
+0000167a <getData>:
+    167a:	e0 cb       	rjmp	.-2112   	; 0xe3c <ioGetData>
+
+0000167c <setData>:
+    167c:	7a cc       	rjmp	.-1804   	; 0xf72 <ioSetData>
+
+0000167e <getChangedData>:
+    167e:	f3 c9       	rjmp	.-3098   	; 0xa66 <ioGetChangedData>
+
+00001680 <isrEveryCall>:
+    1680:	84 ce       	rjmp	.-760    	; 0x138a <ioIsrEveryCall>
+
+00001682 <__udivmodsi4>:
+    1682:	a1 e2       	ldi	r26, 0x21	; 33
+    1684:	1a 2e       	mov	r1, r26
+    1686:	aa 1b       	sub	r26, r26
+    1688:	bb 1b       	sub	r27, r27
+    168a:	fd 01       	movw	r30, r26
+    168c:	0d c0       	rjmp	.+26     	; 0x16a8 <__udivmodsi4_ep>
+
+0000168e <__udivmodsi4_loop>:
+    168e:	aa 1f       	adc	r26, r26
+    1690:	bb 1f       	adc	r27, r27
+    1692:	ee 1f       	adc	r30, r30
+    1694:	ff 1f       	adc	r31, r31
+    1696:	a2 17       	cp	r26, r18
+    1698:	b3 07       	cpc	r27, r19
+    169a:	e4 07       	cpc	r30, r20
+    169c:	f5 07       	cpc	r31, r21
+    169e:	20 f0       	brcs	.+8      	; 0x16a8 <__udivmodsi4_ep>
+    16a0:	a2 1b       	sub	r26, r18
+    16a2:	b3 0b       	sbc	r27, r19
+    16a4:	e4 0b       	sbc	r30, r20
+    16a6:	f5 0b       	sbc	r31, r21
+
+000016a8 <__udivmodsi4_ep>:
+    16a8:	66 1f       	adc	r22, r22
+    16aa:	77 1f       	adc	r23, r23
+    16ac:	88 1f       	adc	r24, r24
+    16ae:	99 1f       	adc	r25, r25
+    16b0:	1a 94       	dec	r1
+    16b2:	69 f7       	brne	.-38     	; 0x168e <__udivmodsi4_loop>
+    16b4:	60 95       	com	r22
+    16b6:	70 95       	com	r23
+    16b8:	80 95       	com	r24
+    16ba:	90 95       	com	r25
+    16bc:	9b 01       	movw	r18, r22
+    16be:	ac 01       	movw	r20, r24
+    16c0:	bd 01       	movw	r22, r26
+    16c2:	cf 01       	movw	r24, r30
+    16c4:	08 95       	ret
+
+000016c6 <eeprom_read_byte>:
+    16c6:	e1 99       	sbic	0x1c, 1	; 28
+    16c8:	fe cf       	rjmp	.-4      	; 0x16c6 <eeprom_read_byte>
+    16ca:	9f bb       	out	0x1f, r25	; 31
+    16cc:	8e bb       	out	0x1e, r24	; 30
+    16ce:	e0 9a       	sbi	0x1c, 0	; 28
+    16d0:	99 27       	eor	r25, r25
+    16d2:	8d b3       	in	r24, 0x1d	; 29
+    16d4:	08 95       	ret
+
+000016d6 <eeprom_update_byte>:
+    16d6:	26 2f       	mov	r18, r22
+
+000016d8 <eeprom_update_r18>:
+    16d8:	e1 99       	sbic	0x1c, 1	; 28
+    16da:	fe cf       	rjmp	.-4      	; 0x16d8 <eeprom_update_r18>
+    16dc:	9f bb       	out	0x1f, r25	; 31
+    16de:	8e bb       	out	0x1e, r24	; 30
+    16e0:	e0 9a       	sbi	0x1c, 0	; 28
+    16e2:	01 97       	sbiw	r24, 0x01	; 1
+    16e4:	0d b2       	in	r0, 0x1d	; 29
+    16e6:	02 16       	cp	r0, r18
+    16e8:	31 f0       	breq	.+12     	; 0x16f6 <eeprom_update_r18+0x1e>
+    16ea:	2d bb       	out	0x1d, r18	; 29
+    16ec:	0f b6       	in	r0, 0x3f	; 63
+    16ee:	f8 94       	cli
+    16f0:	e2 9a       	sbi	0x1c, 2	; 28
+    16f2:	e1 9a       	sbi	0x1c, 1	; 28
+    16f4:	0f be       	out	0x3f, r0	; 63
+    16f6:	08 95       	ret
+
+000016f8 <eeprom_write_byte>:
+    16f8:	26 2f       	mov	r18, r22
+
+000016fa <eeprom_write_r18>:
+    16fa:	e1 99       	sbic	0x1c, 1	; 28
+    16fc:	fe cf       	rjmp	.-4      	; 0x16fa <eeprom_write_r18>
+    16fe:	9f bb       	out	0x1f, r25	; 31
+    1700:	8e bb       	out	0x1e, r24	; 30
+    1702:	2d bb       	out	0x1d, r18	; 29
+    1704:	0f b6       	in	r0, 0x3f	; 63
+    1706:	f8 94       	cli
+    1708:	e2 9a       	sbi	0x1c, 2	; 28
+    170a:	e1 9a       	sbi	0x1c, 1	; 28
+    170c:	0f be       	out	0x3f, r0	; 63
+    170e:	01 96       	adiw	r24, 0x01	; 1
+    1710:	08 95       	ret
+
+00001712 <_exit>:
+    1712:	f8 94       	cli
+
+00001714 <__stop_program>:
+    1714:	ff cf       	rjmp	.-2      	; 0x1714 <__stop_program>
